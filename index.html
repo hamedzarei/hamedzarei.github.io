@@ -1,1 +1,392 @@
-hello world
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Hamed Zarei Home Page">
+    <meta name="keywords" content="hamed,zarei,homepage,حامد,زارعی,web,web developer, full stack web developer,laravel,
+        lumen">
+    <meta name="author" content="Hamed Zarei">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        /*@font-face {*/
+        /*font-family: myFirstFont;*/
+        /*src: url(font/andlso.woff);*/
+
+        /*}*/
+
+        body {
+            background: url("images/background.png");
+            background-repeat: repeat;
+            color: #999999;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 2px;
+            display: block;
+            margin: 1rem;
+            position: relative;
+        }
+
+        .card-1 {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .card-1:hover {
+            cursor: pointer;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .container-fluid {
+            padding: 10px;
+            /*margin: 20px;*/
+            /*width: 70%;*/
+            margin-right: auto;
+            margin-left: auto;
+            /*margin: auto;*/
+        }
+
+        .container-fluid h3 {
+            margin: auto;
+            /*text-align: center;*/
+        }
+
+        /*.container-fluid {*/
+        /*font-size: 1.5vw;*/
+        /*width: 100%;*/
+        /*display: block;*/
+        /*word-wrap: break-word; */
+        /*}*/
+
+        a {
+            text-decoration: none;
+            font: default;
+            /*transition: color 1s ease-in;*/
+
+            /*-webkit-background-clip: text;*/
+            /*-webkit-text-fill-color: transparent;*/
+            /*background-size: 200% 100%;*/
+            /*background-position: 100%;*/
+            /*background: linear-gradient(to right,yellow,blue);*/
+            /*background-image: linear-gradient(*/
+            /*to right,*/
+            /*$secondary-color,*/
+            /*$secondary-color 50%,*/
+            /*$main-color 50%*/
+            /*);*/
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        .resumeDetail {
+            padding: 4px;
+        }
+        .resumeDetail:hover {
+            color: black;
+        }
+        .navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            margin-top: -40px;
+        }
+        .navbar * {
+            padding: 0;
+        }
+
+        .content {
+            margin-top: 40px;
+        }
+        .navbar-inverse .navbar-nav > li > a {
+            color: orange;
+            font: bold;
+            font-size: 1.1vw;
+        }
+
+
+        .myImage {
+            width: 100%;
+        }
+
+        .red {
+            /*transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);*/
+            transition: .3s all;
+        }
+
+        .red:hover {
+            color: red;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <ul class="nav navbar-nav">
+
+                    <li><a target="_self" href="#personalInformation">Personal Information</a></li>
+                    <li><a target="_self" href="#goal">My Objectives</a></li>
+                    <li><a target="_self" href="#education">Education</a></li>
+                    <li><a target="_self" href="#skills">Skills</a></li>
+                    <li><a target="_self" href="#workExperience">Work Experience</a></li>
+                    <li><a target="_self" href="#presentations">Presentations</a></li>
+                    <li><a target="_self" href="#honors">Honors</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-2"></div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col-xs-2">
+            <img class="card card-1 myImage" src="images/hamedzarei.jpeg" alt="hamed zarei">
+        </div>
+        <div class="col-xs-8">
+
+            <a name="personalInformation"></a>
+            <div class="card card-1 container-fluid">
+
+                <h3>
+                    <!--<i class="fa fa-user"></i>-->
+                    Personal Information
+                </h3>
+                <div class="div">
+                    <div class="row resumeDetail">
+                        <div class="col-xs-4"> Name :</div>
+                        <div class="col-xs-8"> Hamed Zarei</div>
+                    </div>
+
+                    <div class="row resumeDetail">
+                        <div class="col-xs-4"> Mobile Phone Number :</div>
+                        <div class="col-xs-8"> +98 0912 417 47 88</div>
+                    </div>
+
+                    <div class="row resumeDetail">
+                        <div class="col-xs-4"> Email :</div>
+                        <div class="col-xs-8"> hamedzarei.7232@gmail.com </div>
+                    </div>
+
+                    <div class="row resumeDetail">
+                        <div class="col-xs-4"> Date of Birthday :</div>
+                        <div class="col-xs-8"> September 26 1993</div>
+                    </div>
+
+                    <div class="row resumeDetail">
+                        <div class="col-xs-4"> Military Status :</div>
+                        <div class="col-xs-8"> Medical Exemption(Eye degree)</div>
+                    </div>
+                </div>
+            </div>
+            <!--<br>-->
+            <div class="card card-1 container-fluid">
+                <a name="goal"></a>
+                <br>
+                <h3>My Objectives</h3>
+                <br>
+                <div class="div">
+                    <div class="col-xs-12">
+                        <ul>
+                            <li class="resumeDetail"> Working in relation with web development</li>
+                            <li class="resumeDetail"> Working in relation with artificial intelligence</li>
+                            <li class="resumeDetail"> Teaching in university</li>
+                            <li class="resumeDetail"> Managing own company</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a name="education"></a>
+            <div class="card card-1 container-fluid">
+                <h3>Education</h3>
+                <div class="div">
+                    <div class="col-xs-12">
+                        <ul>
+                            <li class="resumeDetail"> 2014 – Designing Web Pages [<a href="http://jdamirkabir.ac.ir/"
+                                                                                     target="_blank"> link </a>]
+                            </li>
+                            <li class="resumeDetail"> 2014 – English Courses up to A1 in ACECR Amirkabir University Branch [<a
+                                    href="http://jdamirkabir.ac.ir/" target="_blank"> link </a>]
+                            </li>
+                            <li class="resumeDetail"> 2012 – Started Bachelor of Information Technology in Amirkabir University[<a
+                                    href="http://aut.ac.ir/" target="_blank"> link </a>]
+                            </li>
+                            <li class="resumeDetail"> 2012 – Math Diploma in Mofid1 High School [<a href="http://drm2.mecp.ir/"
+                                                                                                    target="_blank"> link </a>]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a name="skills"></a>
+            <div class="card card-1 container-fluid">
+                <h3>Skills</h3>
+                <div class="div">
+                    <div class="col-xs-12">
+                        <ul>
+                            <li> Data Mining
+                                <ul>
+                                    <li class="resumeDetail"> Weka, R Programming Language</li>
+                                    <li class="resumeDetail"> Familiar with: <span class="red">
+                            Supervised and Unsupervised Algorithm</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> Web Development
+                                <ul>
+                                    <li class="resumeDetail"> HTML(5), CSS(3), JavaScript, jQuery, SVG, XML, OpenLayers, AJAX</li>
+                                    <li class="resumeDetail"> Familiar with: AngularJS, Bootstrap, PHP, CherryPy, symfony, jQuery
+                                        UI, NodeJs, SASS, SCSS, JSON, CMS(Wordpress, Joomla), amcharts.js, datatables.js
+                                        JStorage
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> Database
+                                <ul>
+                                    <li class="resumeDetail"> PostgreSQL, MySQL</li>
+                                    <li class="resumeDetail"> Familiar with:SQL-Server, SQLite, MongoDB</li>
+                                </ul>
+                            </li>
+                            <li> Security
+                                <ul>
+                                    <li class="resumeDetail"> Familiar with: Accunetix, Nessus, Kali, metasploitable</li>
+                                </ul>
+                            </li>
+                            <li> Networking
+                                <ul>
+                                    <li class="resumeDetail"> Familiar with: Wireshark, Cisco Packet Tracer</li>
+                                </ul>
+                            </li>
+                            <li> Programming Language and Scripting
+                                <ul>
+                                    <li class="resumeDetail"> Python, C, C++, Java</li>
+                                    <li class="resumeDetail"> Familiar with: Matlab, VHDL, Shell Scripting, D, C#</li>
+                                </ul>
+                            </li>
+                            <li> Operating System
+                                <ul>
+                                    <li class="resumeDetail"> Experienced with: Windows, Linux(ubuntu, Mint, CentOS)</li>
+                                </ul>
+                            </li>
+                            <li> Version Control
+                                <ul>
+                                    <li class="resumeDetail"> Experienced with: Subversion(SVN), Git</li>
+                                </ul>
+                            </li>
+                            <li> Typesetting
+                                <ul>
+                                    <li class="resumeDetail"> Microsoft Word, Vi/Vim</li>
+                                    <li class="resumeDetail"> Familiar with: TEX(Latex), Markdown, LibreOffice Writer</li>
+                                </ul>
+                            </li>
+                            <li> Others
+                                <ul>
+                                    <li class="resumeDetail"> Microsoft Project, Microsft Excel, UML, ORCAD, Proteus, ModelSim, End
+                                        Note, Zotero
+                                    </li>
+                                    <li class="resumeDetail"> Familiar with: Software Engineering, Enterprise Architecture, Xilinx
+                                        ISE Design Suite, Maple, GeoGebra, Movie Maker, Pitivi
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a name="workExperience"></a>
+            <div class="card card-1 container-fluid">
+                <h3>Work Experience</h3>
+                <div class="div">
+                    <div class="col-xs-12">
+                        <ul>
+                            <li class="resumeDetail"> 2015 - Freelance Web Developer</li>
+                            <li class="resumeDetail"> 2015 - Web Developer at <a href="http://shiveh.com" target="_blank">
+                                Shiveh </a></li>
+                            <li class="resumeDetail"> 2015 - Data Analyst for Summer Intership at <a href="http://farabord.com"
+                                                                                                     target="_blank"> Farabord </a>
+                            </li>
+                            <li class="resumeDetail"> 2012 - Teaching Mathematics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a name="presentations"></a>
+            <div class="card card-1 container-fluid">
+                <h3>Presentations and Projects(in Persian)</h3>
+                <div class="div">
+                    <div class="col-xs-12">
+                        <ol>
+                            <li class="resumeDetail"> Client side web application for manipulating hospital data(Technical View:
+                                HTML(5), CSS(3), Javascript, jQuery, Bootstrap, XML, php)
+                            </li>
+                            <li class="resumeDetail"> Web Pages as DEMO for presenting work for datamining group of
+                                Farabord(technical view: HTML(5), CSS(3), Bootstrap, jQuery,
+                                javascript, datatables.js, amcharts.js, python(server-side) )
+                            </li>
+                            <li class="resumeDetail"><a href="Text%20Classification"> Text Classifcation Presentation </a> for data
+                                mining course
+                            </li>
+                            <li class="resumeDetail"><a href="WebGL"> Webgl Presentation </a> for graphic course</li>
+                            <li class="resumeDetail"> Shiveh Corporation Site(In technical view: Wordpress, html, css, php,...)</li>
+                            <li class="resumeDetail"> Radsan-Rahdari(Project in Shiveh Corporation; in technical view: Zend,
+                                (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, Klass, MVC)
+                            </li>
+                            <li class="resumeDetail"> Web pages for presenting result of <a href="http://www.magsaco.ir">MAGSA</a>'s
+                                SOC project.(In technical view: PHP, HTML(5), CSS(3), Javascript, JQuery, amcharts.js, Bootstrap...)
+                            </li>
+                            <li class="resumeDetail"> Radsan-PersiIranGas(Project in Shiveh Corporation; in technical view: Zend,
+                                (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, Klass, MVC)
+                            </li>
+                            <li class="resumeDetail"> Apprenticeship Report on Data Mining(Document and Code in R Programming
+                                Language)
+                            </li>
+                            <li class="resumeDetail"> Research Method & Report Writing(Document)</li>
+                            <li class="resumeDetail"> Project of Software Engineering 2(Document)</li>
+                            <li class="resumeDetail"> Project of Signals and Systems(Convolution Sum)(Java)</li>
+                            <li class="resumeDetail"> Final Project of Strategic Planning(Document)</li>
+                            <li class="resumeDetail"> Strategic Planning Process of Social Media(Research for Strategic
+                                Planning)(Document)
+                            </li>
+                            <li class="resumeDetail"> The First Project of Software Engineering 1(Document)</li>
+                            <li class="resumeDetail"> The Second Project of Software Engineering 1(Document)</li>
+                            <li class="resumeDetail"> Project of Computer Architecture(with Proteus)</li>
+                            <li class="resumeDetail"> Project of Electonic Circuit(with Orcad)</li>
+                            <li class="resumeDetail"> Final Project of Fundamental of Management(Document)</li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+
+            <a name="honors"></a>
+            <div class="card card-1 container-fluid">
+                <h3>Honors</h3>
+                <div class="div">
+                    <div class="col-xs-12">
+                        <ul>
+                            <li class="resumeDetail"> Second place among accepted IT Students in Amirkabir University at Entrance
+                                Exam <br/>( 2 of 34)
+                            </li>
+                            <li class="resumeDetail"> Accepted in first level of Mathematics Olympiad ( 2011 )</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+</div>
+
+</body>
+</html>

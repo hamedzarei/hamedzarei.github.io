@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>WEB</title>
+    <meta name="description" content="" />
+    <meta name="author" content="pooria barghi" />
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script language="javascript" src="js/custom.js"></script>
+
+</head>
+<!-- #96bbe5 -->
+<body class="impress-not-supported">
+    <a id="overview-btn" href="#overview">
+    	<img src="images/home.png" width="25">
+    </a>
+	<div id="impress">
+
+	<!-- main slide -->
+		<div id="main-slide" class="step" data-x="700" data-z="700" data-rotate-y="-80">
+        	<div class="logo-container">
+            	<img src="images/html5.png" width="220" height="220">
+            	<img src="images/webgl.png" width="220" height="220">
+            	<img src="images/js.png" width="220" height="220">
+            	<img src="images/w3.png" width="220" height="220">
+        	</div>
+        	<h1>مقدمه ای بر WebGL</h1>
+        	<h1></h1>
+        	<p class="author">دانشگاه صنعتی امیر کبیر <br> حامد زارعی - پوریا برقی مقدم <br> 1395-1394</p>
+        </div>
+		
+	<!-- table of content -->
+        <div id="table-of-content" class="step">
+            بخش ١ : مقدمه<br>
+            بخش ۲ : WebGL چیست ؟<br>
+            بخش ۳ : Shader Programs<br>
+            بخش ۴ : Graphics Pipeline<br>
+            بخش ۵ : WebGL در عمل<br>
+        </div>
+
+	<!-- section 1 -->
+        <div class="section section-start step" data-section="1" data-section-title="بخش ١ : مقدمه">
+            <h2>بخش ١<br>مقدمه</h2>
+        </div>
+		
+		<!-- slide 1-1 -->
+        <div class="section slide step" data-section="1">
+            <ul>
+            	<li>وب سنتی دست خوش تغییرات فراوانی شده است.</li>
+            	<li>مرورگرها به‌ سرعت در حال تحول هستند.</li>
+            	<li>مرورگرها به پلتفرم‌های پیشرفته‌ای تبدیل شده‌اند.</li>
+            </ul>
+        	<div class="center">
+        		<img src="images/b1.png" height="80;" style="margin-left:30px;">
+        		<img src="images/b2.png" height="80;" style="margin-left:30px;">
+        		<img src="images/b3.png" height="80;" style="margin-left:30px;">
+        		<img src="images/b4.png" height="80;" style="margin-left:30px;">
+        		<img src="images/b5.png" height="80;" style="margin-left:30px;">
+        	</div>
+        	<span class="blue" style="margin-top:40px;">این تکامل به interface و قابلیت‌های گرافیکی فراتر از دو بعد نیازمند است</span>
+        </div>
+	
+		<!-- slide 1-2 -->
+        <div class="section slide step" data-section="1">
+            <div class="center">
+            	<img src="images/flash.png" height="150px" style="margin-bottom:50px">
+            </div>
+			<ul>
+            	<li>فلش سالها نیاز های گرافیکی برنامه نویسان را برآورده کرده است.</li>
+            	<li>ولی
+					<ul>
+						<li>یکی از خطرناک‌ترین نرم‌افزارهای حال حاضر در دنیای اینترنت است.</li>
+						<li>پهنای باند اینترنت را هدر می دهد.</li>
+						<li>انحصاری شرکت ادوبی است.</li>
+					</ul>
+				</li>
+			</ul>
+        </div>
+		
+		<!-- slide 1-3 -->
+        <div class="section slide step" data-section="1">
+            <div class="center">
+            	<img src="images/html5.png" height="230px">
+            </div>
+			<ul>
+				<li><bdi>HTML <span class="en-number">5</span></bdi>
+					<ul>
+						<li>معرفی نسخه اولیه در 2008</li>
+						<li>معرفی نسخه نهایی در 2014</li>
+						<li>معرفی ویژگی های جدید از جمله :<br>
+						<span class="en-number"><bdi>2D Canvas , SVG , 3D CSS , WebGL</bdi><span></li>
+					</ul>
+				</li>
+			</ul>
+        </div>
+		
+	<!-- section 2 -->
+		<div class="section section-start step" data-section="2" data-section-title="بخش ۲ : WebGL چیست ؟">
+            <h2>بخش ۲<br>WebGL چیست ؟</h2>
+        </div>
+
+		<!-- slide 2-1 -->
+        <div class="section slide step" data-section="2">
+            <div class="center">
+            	<img src="images/webgl2.png" height="120px" style="margin:30px 0 60px;">
+            </div>
+            <ul class="no-margin">
+            	<li>WebGL به زبان ساده، تکنولوژی‌ برای : <br>
+            	کشیدن، به نمایش در آوردن و تعامل سطح بالا و پیشرفته<br>
+            	با گرافیک دو بعدی و سه‌بعدی کامپیوتری<br>
+            	از طریق html5 و javascript<br>
+            	در مرورگرهای وب است.
+            	</li>            	
+            </ul>
+        </div>
+		
+		<!-- slide 2-2 -->
+        <div class="section slide step" data-section="2">
+            <ul>
+            	<li>مزیت های WebGL :
+            		<ul>
+            			<li>یک تکنولوژی built-in در مرورگرهای مدرن</li>
+            			<li>بدون نیاز به کامپایل کردن</li>
+            			<li>open source</li>
+            			<li>برنامه نویسی با javascript (حتی jquery)</li>
+            			<li>مدیریت حافظه خودکار</li>
+            			<li>دسترسی مستقیم به GPU</li>
+					</ul>
+            	</li>
+            </ul>
+            <div class="blue center"><a href="http://alteredqualia.com/xg/examples/text_rendering.html" target="_blank">نمونه یک گرافیک با webgl</a></div>
+        </div>
+
+        <!-- slide 2-3 -->
+        <div class="section slide step" data-section="2">
+            <div class="center">
+            	<img src="images/webgl2.png" height="80px">
+            	<img src="images/opengl_es.png" height="80px" style="margin-right:30px">
+            	<img src="images/opengl.png" height="80px" style="margin-right:30px">
+            </div>
+            <img src="images/1.png" width="100%" style="margin-top:100px;">
+        </div>
+		
+		<!-- slide 2-4 -->
+        <div class="section slide step" data-section="2">
+        <h2>سیستم مختصات</h2>
+        	<ul class="no-margin">
+        		<li>حجم دید محدود به (1, 1, 1) و <bdi>(-1, -1, - 1)</bdi></li>
+        		<li>Vertices</li>
+        		<li>Indices</li>
+        	</ul>
+            <div class="center" style="margin-top:40px;">
+            	<img src="images/webgl_coordinate_system.jpg" height="250px" style="margin-left:40px;">
+            	<img src="images/vertices_example.jpg" height="250px">
+            </div>
+        </div>
+		
+		<!-- slide 2-5 -->
+        <div class="section slide step" data-section="2">
+        	<h2>بافرها</h2>
+        	<ul class="no-margin">
+        		<li>Vertex buffer objects<br>
+					قسمتی از حافظه که داده های مربوط به هر vertex را ذخیره می کند.
+        		</li><br>
+        		<li>Index buffer objects<br>
+        			قسمتی از حافظه که داده های مربوط به index ها را ذخیره می کند.
+        		</li><br>
+        		<li>Frame buffer<br>
+					قسمتی از حافظه که اطلاعات مربوط به صحنه نهایی را ذخیره می کند.<br>
+					مانند : طول و عرض صحنه ، رنگ هر پیکسل و ...
+        		</li>
+        	</ul>
+        </div>
+		
+		<!-- slide 2-6 -->
+        <div class="section slide step" data-section="2">
+        	<h2>Mesh</h2>
+        	<div class="center"><img src="images/mesh_example.jpg" alt=""></div>
+        </div>
+
+    <!-- section 3 -->
+    	<div class="section section-start step" data-section="3" data-section-title="بخش ۳ : Shader Programs">
+            <h2>بخش ۳<br>Shader Programs</h2>
+        </div>
+
+        <!-- slide 3-1 -->
+        <div class="section slide step" data-section="3">
+        	<h2>Shader Programs</h2>
+			<ul>
+				<li>برای رسم مثلث ها اطلاعات باید از CPU به GPU منتقل شود <span class="red">= سربار</span></li>
+				<li>WebGl برای کاهش این سربار از Shader Programs استفاده می کند.</li>
+				<li>Shader Programs با زبان <bdi>OpenGL ES Shading Language (GLSL)</bdi> نوشته می شود.</li>
+				<li>قطعه کدی است که اطلاعات مربوط به پیکسل های یک mesh را می گیرد و شکل را رسم می کند.</li>
+			</ul>
+        </div>
+
+        <!-- slide 3-2 -->
+        <div class="section slide step" data-section="3">
+        	<h2>انواع Shader</h2>
+			<ul >
+				<li>Vertex Shader
+					<ul>
+						<li class="blue">برنامه ای که برای همه vertex ها اجرا می شود.</li>
+						<li>همه ی ویژگی های راس ها را کنترل می کند.<br>
+						مانند : مختصات ، رنگ ، بافت و ...
+						</li>
+					</ul>
+				</li>
+				<li>Fragment Shader
+					<ul>
+						<li>یک mesh از تعدادی مثلث تشکیل شده است که هر سطح مثلث یک fragment نامیده می شود.</li>
+						<li class="blue">برنامه ای است که برای همه پیکسل های یک fragment اجرا می شود.</li>
+					</ul>
+				</li>
+			</ul>
+        </div>
+		
+		<!-- slide 3-3 -->
+        <div class="section slide step" data-section="3">
+			<div class="center" style="margin-top:100px;"><img src="images/fragment_shader.jpg" alt=""></div>
+        </div>
+
+        <!-- slide 3-4 -->
+        <div class="section slide step" data-section="3">
+        	<h2>متغیرهای OpenGL ES SL</h2>
+        	<ul class="no-margin">
+        		<li>Attributes<br>
+				داده ها را از vertex buffer objects می گیرد.
+        		</li>
+        		<li>Uniforms<br>
+				داده های ورودی که در هر دو shader مشترک هستند.<br>
+				مانند : موقعیت نور , بافت و ...
+        		</li>
+        		<li>Varyings<br>
+				به منظور انتقال داده از vertex shader به fragment shader مورد استفاده قرار می گیرد.
+        		</li>
+        	</ul>
+        </div>
+
+    <!-- section 4 -->
+        <div class="section section-start step" data-section="4" data-section-title="بخش ۴ : Graphics Pipeline">
+            <h2>بخش ۴ <br>Graphics Pipeline</h2>
+        </div>
+
+		<!-- slide 4-1 -->
+		<div class="section slide step" data-section="4">
+        	<h2>Graphics Pipeline</h2>
+        	<div class="center"><img src="images/webgl_graphics_pipeline.jpg" alt="" width="700px" style="margin-top:10px;"></div>
+        </div>
+
+        <!-- slide 4-2 -->
+        <div class="section slide step" data-section="4">
+        	<h2>توضیحات بخش های مختلف Graphics Pipeline</h2>
+        	<ul class="no-bulet">
+        		<li>1 - Vertex Shader<br>
+					مشخصات راس ها تعیین می شود.
+        		</li>
+        		<li>2 - Primitive Assembly<br>
+					مثلث ها تشکیل می شوند.
+        		</li>
+        		<li>3 - Rasterization<br>
+					پیکسل های شکل نهایی مشخص می شوند.
+					<ul>
+						<li>Culling</li>
+						<li>Clipping</li>
+					</ul>
+        		</li>
+				 		
+        	</ul>
+        </div>
+
+        <!-- slide 4-3 -->
+        <div class="slide step" data-y="3400" data-x="-2200" data-z="-1000">
+        	<div class="center">
+        		<img src="images/Back_face_culling_skull_example.png" alt="">
+        		<img src="images/vertex-shader-anim.gif" alt="">
+        	</div>
+        </div>
+		
+		<!-- slide 4-3 -->
+        <div class="section slide step" data-section="4">
+        	<h2>توضیحات بخش های مختلف Graphics Pipeline</h2>
+        	<ul class="no-margin no-bulet">
+				<li>4 - Fragment Shader<br>
+
+        		</li>
+
+        		<li>5 - Frame Buffer<br>
+
+        		</li>   		
+        	</ul>
+        	<div class="center">
+        		<img src="images/fragment_operations.jpg" alt="">
+        	</div>
+        </div>
+
+    <!-- section 5 -->
+        <div class="section section-start step" data-section="5" data-section-title="بخش ۵ : WebGL در عمل">
+            <h2>بخش ۵ <br>WebGL در عمل</h2>
+        </div>
+		
+	   <!-- slide 5-1 -->
+		<div class="section slide step" data-section="5">
+        	<h2>مراحل رسم با WebGL</h2>
+        	<ul class="no-margin no-bulet">
+				<li>1 - تعریف کردن Canvas و گرفتن تفسیر از WebGL<br>
+
+        		</li>
+
+        		<li>2 - تعریف کردن هندسه مورد نیاز و ذخیره کردن آن در بافرها<br>
+
+        		</li>
+				
+				<li>3 - ایجاد و کامپایل کردن برنامه shader<br>
+
+        		</li>
+				
+				<li>4 - اختصاص دادن بافرها به برنامه shader <br>
+
+        		</li>
+				
+				<li>5 - رسم شئ مورد نظر<br>
+
+        		</li>
+        	</ul>
+        </div>
+	
+	   <!-- slide 5-2 -->
+		<div class="section slide step" data-section="5">
+        	<h2>1 - تعریف کردن Canvas و گرفتن تفسیر از WebGL</h2>
+			<h3> HTML </h3>
+			<code>
+				<textarea class="input_code latin"><canvas width = "300" height = "300" id = "my_Canvas"></canvas>
+				</textarea>
+			</code>
+			<h3> JavaScript</h3>
+			<div class="latin">
+				var canvas = document.getElementById('my_Canvas');
+			</div>
+			<br/>
+			<div class="latin">
+				var gl = canvas.getContext('experimental-webgl');
+			</div>  	
+        </div>
+		
+	   <!-- slide 5-3 -->
+		<div class="section slide step" data-section="5">
+        	<h2>2 - تعریف کردن هندسه مورد نیاز و ذخیره کردن آن در بافرها</h2>
+			
+			<ul class="no-bulet latin">
+			     <li class="latin"> var vertices = [-0.5, 0.5, -0.5, -0.5, 0.0, -0.5, 1, 0.0];<br/>
+				 </li>
+				 
+				 <li class="latin"> var vertex_buffer = gl.createBuffer();<br/>
+				 </li>
+				 <li class="latin"> gl.bindBuffer(gl.ARRAY_BUFFER, vertex_buffer);<br/>
+				 </li>
+				 <li class="latin"> gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);<br/>
+				 </li>
+				 <li class="latin"> gl.bindBuffer(gl.ARRAY_BUFFER, null);<br/> </li>
+			</ul>
+		</div>
+		
+		<!-- slide 5-4 -->	
+		<div class="section slide step" data-section="5">
+        	<h2>3 - ایجاد و کامپایل کردن برنامه shader</h2>
+			
+			<ul class="no-bulet">
+			     <li> 1.3 - ایجاد و کامپایل کردن برنامه shader رئوس <br/>
+				 </li>
+				 
+				 <li> 2.3 - ایجاد و کامپایل کردن برنامه shader اضلاع<br/>
+				 </li>
+				 <li> 3.3 - متصل کردن دو برنامه به یکدیگر<br/>
+				 </li>
+			</ul>
+		</div>
+		
+		<!-- slide 5-5 -->	
+		<div class="section slide step" data-section="5">
+        	<h2>5 - رسم شئ مورد نظر</h2>
+			
+			<ul class="no-bulet">
+			     <li class="latin"> gl.drawArrays(gl.TRIANGLES, 0, 3); <br/>
+				 </li>
+				 <li class="latin"> gl.drawArrays(gl.POINTS, 0, 3); <br/>
+				 </li>
+				 <li class="latin"> gl.drawArrays(gl.LINE_STRIP, 0, 3); <br/>
+				 </li>
+				 <li class="latin"> gl.drawArrays(gl.LINE_LOOP, 0, 3); <br/>
+				 </li>
+			</ul>
+		</div>
+		
+		<!-- slide 5-6 -->	
+		<div class="section slide step" data-section="5">
+        	<h2>چیزی که تا حالا رسم شده است!؟</h2>
+			<iframe id="iframe_basicWebGL" class="full-width" src="pages/basicWebGL.html"></iframe>
+		</div>
+		
+		<!-- slide 5-7 -->	
+		<div class="section slide step" data-section="5">
+        	<h2>چیزی که در  بازار کار موجود است؟!؟</h2>
+			<a href="http://playcanv.as/p/RqJJ9oU9?overlay=false" target="_blank"> BMW MODEL </a>
+		</div>
+		
+		<!-- slide 5-7 -->	
+		<div class="section slide step" data-section="5">
+        	<h2>با خود WebGL خام این همه جزییات را بنویسیم!؟!</h2>
+			<a href="http://jsfiddle.net/VsWb9/" target="_blank"> مثالی از three.js </a>
+		</div>
+		
+		<!-- slide 5-8 -->	
+		<div class="section slide step" data-section="5">
+        	<!-- <h2>با خود WebGL خام این همه جزییات را بنویسیم!؟!</h2> -->
+			<img class="full-width" src="images/framework-comparison.jpg" alt="">
+		</div>
+
+
+	<!-- overview -->
+        <div id="overview" class="step" data-x="-4900" data-y="3300" data-scale="8">
+        	<!-- <div class="resource"></div> -->
+        </div>
+        <div id="last-slide" class="step" data-x="-4900" data-y="3300" data-scale="10">
+        	از توجه شما سپاس گزاریم
+        </div>
+
+    </div>
+
+	<script src="js/impress.js"></script>
+	<script>
+
+	jQuery(document).ready(function($) {
+		var x0 = 0;
+		var y0 = 200;
+		var z0 = 0;
+
+		dy = 800;
+		dx = -1100;
+
+		number_of_slides = $('.slide').length;
+		slide_number = 1;
+
+		$('.section').each(function() {
+			
+			if(! $(this).is('.slide')){
+				index = 0;
+				section_title = $(this).data('section-title');
+			}
+			else{
+				var footer = 
+				'<div class="footer">\
+					<span class="slide-footer">'+section_title+'</span>\
+					<span class="slide-number">'+slide_number+' از '+number_of_slides+'</span>\
+				</div>'
+
+				$(this).append(footer);
+				slide_number++;
+			}
+
+			// handle position
+			section_number = $(this).data('section');
+			moveY = dy * section_number + y0;
+			moveX = dx * index + x0;
+			$(this).attr({
+				'data-y': moveY,
+				'data-x': moveX,
+			});
+			index++;
+
+		});
+
+		impress().init();
+	});
+		
+
+	</script>
+</body>
+</html>
