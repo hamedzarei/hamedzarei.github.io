@@ -30,6 +30,7 @@
             display: block;
             margin: 1rem;
             position: relative;
+	    padding-bottom: 50px;
         }
 
         .card-1 {
@@ -73,15 +74,24 @@
         }
         .navbar * {
             padding: 0;
+	    padding-left: 5px;
         }
+	.navbar li {
+		display: inline-block;
+	}
 
         .content {
             padding-top: 70px;
         }
         .navbar-inverse .navbar-nav > li > a {
             color: orange;
-            font-size: 1.1vw;
+            font-size: 1.5vw;
+	    font-weight: 2vw;
         }
+
+	.nav > li > a {
+	 	padding: 0.5vw;
+	}
 
         .myImage {
             width: 100%;
@@ -103,9 +113,9 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-xs-2"></div>
-            <div class="col-xs-8">
-                <ul class="nav navbar-nav">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 col-xs-12">
+                <ul class="nav navbar navbar-nav">
 
                     <li><a target="_self" href="#personalInformation">Personal Information</a></li>
                     <li><a target="_self" href="#goal">My Objectives</a></li>
@@ -117,17 +127,19 @@
                     <li><a target="_self" href="resume.pdf">PDF</a></li>
                 </ul>
             </div>
-            <div class="col-xs-2"></div>
+            <div class="col-lg-2"></div>
         </div>
     </div>
 </nav>
 
 <div class="container-fluid content">
     <div class="row">
-        <div class="col-xs-2">
+        <div class="hidden-xs col-lg-2">
+	    <br>
+	    <br>
             <img class="card card-1 myImage" src="images/hamedzarei.jpeg" alt="hamed zarei">
         </div>
-        <div class="col-xs-8">
+        <div class="col-lg-8 col-xs-12">
 
             <a name="personalInformation">
                 <br>
@@ -388,7 +400,7 @@
             </div>
 
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-lg-2"></div>
     </div>
 </div>
 
