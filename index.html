@@ -148,7 +148,7 @@
         }
 
         .nav > li > a {
-            padding: 0.5vw;
+            padding: 0.8vw;
         }
 
         .myImage {
@@ -453,6 +453,8 @@
                     location.hostname == this.hostname
                 ) {
                     // Figure out element to scroll to
+                    $('a[href*="#"]').css('color', 'white');
+                    $(this).css('color', 'black');
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     // Does a scroll target exist?
