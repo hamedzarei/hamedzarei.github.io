@@ -441,6 +441,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
+        if ($('a[href="'+location.hash+'"]').length == 0) {
+            $('a[href="#personal_information"]').css('color', 'black');
+        } else {
+            $('a[href="'+location.hash+'"]').css('color', 'black');
+        }
         $('a[href*="#"]')
         // Remove links that don't actually link to anything
             .not('[href="#"]')
