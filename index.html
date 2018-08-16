@@ -166,11 +166,11 @@
             <div class="col-lg-8 col-xs-12">
                 <ul class="nav navbar-nav">
 
-                    <li><a target="_self" href="#personalInformation">Personal Information</a></li>
+                    <li><a target="_self" href="#personal_information">Personal Information</a></li>
                     <li><a target="_self" href="#goal">My Objectives</a></li>
                     <li><a target="_self" href="#education">Education</a></li>
                     <li><a target="_self" href="#job_title">Job Titles</a></li>
-                    <li><a target="_self" href="#workExperience">Work Experience</a></li>
+                    <li><a target="_self" href="#work_experience">Work Experience</a></li>
                     <li><a target="_self" href="#presentations">Presentations</a></li>
                     <li><a target="_self" href="#honors">Honors</a></li>
                     <li><a target="_self" href="resume.pdf">PDF</a></li>
@@ -190,7 +190,7 @@
         </div>
         <div class="col-lg-8 col-xs-12">
 
-            <a name="personalInformation">
+            <a name="personal_information">
                 <br>
             </a>
             <div class="card card-1 container-fluid">
@@ -281,7 +281,7 @@
                 </div>
             </div>
 
-            <a name="workExperience">
+            <a name="work_experience">
                 <br>
             </a>
             <div class="card card-1 container-fluid">
@@ -456,6 +456,7 @@
                     $('a[href*="#"]').css('color', 'white');
                     $(this).css('color', 'black');
                     var target = $(this.hash);
+                    location.hash = this.hash.slice(1);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     // Does a scroll target exist?
                     if (target.length) {
