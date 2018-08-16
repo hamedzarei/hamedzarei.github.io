@@ -30,7 +30,7 @@
             display: block;
             margin: 1rem;
             position: relative;
-	    padding-bottom: 50px;
+            padding-bottom: 50px;
         }
 
         .card-1 {
@@ -56,60 +56,93 @@
             text-decoration: none;
 
         }
+
         ul {
             list-style-type: none;
+        }
+        ol {
+            list-style-type: none;
+        }
+
+        ol.circle {
+            list-style-image: url("images/icons8-checked-15.png");
+        }
+        .circle ul, ol {
+            list-style-type: none;
+        }
+
+        ul.job_title {
+            list-style-image: url('images/icons8-ok-15.png');
+            /*list-style-type: disc;*/
+        }
+        ul.job_title ul {
+            list-style-image: none;
+            list-style-type: circle;
+        }
+
+        ul.goal {
+            list-style-image: url("images/icons8-goal-15.png");
+        }
+
+        ul.education {
+            list-style-image: url("images/icons8-graduation-cap-15.png");
+        }
+
+        ul.work-experience {
+            list-style-image: url("images/icons8-work-15.png");
         }
 
         .resumeDetail {
             padding: 4px;
         }
+
         .resumeDetail:hover {
             color: black;
         }
+
         .navbar {
             width: 100%;
             position: fixed;
             z-index: 100;
             margin-top: 0px;
         }
+
         .navbar * {
             padding: 0;
-	    padding-left: 5px;
+            padding-left: 5px;
         }
-	.navbar ul {
-		margin: auto;
-	}
-	.navbar li {
-		display: inline-block;
-        padding: 0px;
-	}
-    .nvabar li a {
-    margin: 0px; display: block; width: 100%; height: 100%;
-    }
+
+        .navbar ul {
+            margin: auto;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 0px;
+        }
+
+        .nvabar li a {
+            margin: 0px;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
 
         .content {
             padding-top: 70px;
         }
+
         .navbar-inverse .navbar-nav > li > a {
             color: orange;
-            font-size: 85%;
+            font-size: 125%;
         }
 
-	.nav > li > a {
-	 	padding: 0.5vw;
-	}
+        .nav > li > a {
+            padding: 0.5vw;
+        }
 
         .myImage {
             width: 100%;
-        }
-
-        .red {
-            transition: .3s all;
-        }
-
-        .red:hover {
-            color: red;
-            font-size: larger;
         }
     </style>
 </head>
@@ -126,7 +159,7 @@
                     <li><a target="_self" href="#personalInformation">Personal Information</a></li>
                     <li><a target="_self" href="#goal">My Objectives</a></li>
                     <li><a target="_self" href="#education">Education</a></li>
-                    <li><a target="_self" href="#skills">Skills</a></li>
+                    <li><a target="_self" href="#job_title">Job Titles</a></li>
                     <li><a target="_self" href="#workExperience">Work Experience</a></li>
                     <li><a target="_self" href="#presentations">Presentations</a></li>
                     <li><a target="_self" href="#honors">Honors</a></li>
@@ -141,8 +174,8 @@
 <div class="container-fluid content">
     <div class="row">
         <div class="hidden-xs hidden-sm col-lg-2">
-	    <br>
-	    <br>
+            <br>
+            <br>
             <img class="card card-1 myImage" src="images/hamedzarei.jpeg" alt="hamed zarei">
         </div>
         <div class="col-lg-8 col-xs-12">
@@ -167,15 +200,15 @@
                         <div class="col-xs-4"> Mobile Phone Number :</div>
                         <div class="col-xs-8"> +98 0938 71 79 228</div>
                     </div>
-		
-		    <div class="row resumeDetail">
+
+                    <div class="row resumeDetail">
                         <div class="col-xs-4"> Telegram ID :</div>
                         <div class="col-xs-8">@ZareiHamed</div>
-		    </div>
+                    </div>
 
                     <div class="row resumeDetail">
                         <div class="col-xs-4"> Email :</div>
-                        <div class="col-xs-8"> hamedzarei.7232@gmail.com </div>
+                        <div class="col-xs-8"> hamedzarei.7232@gmail.com</div>
                     </div>
 
                     <div class="row resumeDetail">
@@ -199,7 +232,7 @@
                 <br>
                 <div class="div">
                     <div class="col-xs-12">
-                        <ul>
+                        <ul class="goal">
                             <li class="resumeDetail"> Working in relation with web development</li>
                             <li class="resumeDetail"> Working in relation with artificial intelligence</li>
                             <li class="resumeDetail"> Teaching in university</li>
@@ -209,163 +242,144 @@
                 </div>
             </div>
             <a name="education">
-		<br>
-	    </a>
+                <br>
+            </a>
             <div class="card card-1 container-fluid">
-		<br>
+                <br>
                 <h3>Education</h3>
-		<br>
+                <br>
                 <div class="div">
                     <div class="col-xs-12">
-                        <ul>
+                        <ul class="education">
                             <li class="resumeDetail"> 2014 – Designing Web Pages [<a href="http://jdamirkabir.ac.ir/"
                                                                                      target="_blank"> link </a>]
                             </li>
-                            <li class="resumeDetail"> 2014 – English Courses up to A1 in ACECR Amirkabir University Branch [<a
-                                    href="http://jdamirkabir.ac.ir/" target="_blank"> link </a>]
+                            <li class="resumeDetail"> 2014 – English Courses up to A1 in ACECR Amirkabir University
+                                Branch [<a
+                                        href="http://jdamirkabir.ac.ir/" target="_blank"> link </a>]
                             </li>
-                            <li class="resumeDetail"> 2012 – Started Bachelor of Information Technology in Amirkabir University[<a
-                                    href="http://aut.ac.ir/" target="_blank"> link </a>]
+                            <li class="resumeDetail"> 2012 – Started Bachelor of Information Technology in Amirkabir
+                                University[<a
+                                        href="http://aut.ac.ir/" target="_blank"> link </a>]
                             </li>
-                            <li class="resumeDetail"> 2012 – Math Diploma in Mofid1 High School [<a href="http://drm2.mecp.ir/"
-                                                                                                    target="_blank"> link </a>]
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <a name="skills">
-		<br>
-	    </a>
-            <div class="card card-1 container-fluid">
-		<br>
-                <h3>Skills</h3>
-		<br>
-                <div class="div">
-                    <div class="col-xs-12">
-                        <ul>
-                            <li> Data Mining
-                                <ul>
-                                    <li class="resumeDetail"> Weka, R Programming Language</li>
-                                    <li class="resumeDetail"> Familiar with: <span class="red">
-                            Supervised and Unsupervised Algorithm</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li> Web Development
-                                <ul>
-                                    <li class="resumeDetail"> HTML(5), CSS(3), JavaScript, jQuery, SVG, XML, OpenLayers, AJAX</li>
-                                    <li class="resumeDetail"> Familiar with: AngularJS, Bootstrap, PHP, CherryPy, symfony, jQuery
-                                        UI, NodeJs, SASS, SCSS, JSON, CMS(Wordpress, Joomla), amcharts.js, datatables.js
-                                        JStorage
-                                    </li>
-                                </ul>
-                            </li>
-                            <li> Database
-                                <ul>
-                                    <li class="resumeDetail"> PostgreSQL, MySQL</li>
-                                    <li class="resumeDetail"> Familiar with:SQL-Server, SQLite, MongoDB</li>
-                                </ul>
-                            </li>
-                            <li> Security
-                                <ul>
-                                    <li class="resumeDetail"> Familiar with: Accunetix, Nessus, Kali, metasploitable</li>
-                                </ul>
-                            </li>
-                            <li> Networking
-                                <ul>
-                                    <li class="resumeDetail"> Familiar with: Wireshark, Cisco Packet Tracer</li>
-                                </ul>
-                            </li>
-                            <li> Programming Language and Scripting
-                                <ul>
-                                    <li class="resumeDetail"> Python, C, C++, Java</li>
-                                    <li class="resumeDetail"> Familiar with: Matlab, VHDL, Shell Scripting, D, C#</li>
-                                </ul>
-                            </li>
-                            <li> Operating System
-                                <ul>
-                                    <li class="resumeDetail"> Experienced with: Windows, Linux(ubuntu, Mint, CentOS)</li>
-                                </ul>
-                            </li>
-                            <li> Version Control
-                                <ul>
-                                    <li class="resumeDetail"> Experienced with: Subversion(SVN), Git</li>
-                                </ul>
-                            </li>
-                            <li> Typesetting
-                                <ul>
-                                    <li class="resumeDetail"> Microsoft Word, Vi/Vim</li>
-                                    <li class="resumeDetail"> Familiar with: TEX(Latex), Markdown, LibreOffice Writer</li>
-                                </ul>
-                            </li>
-                            <li> Others
-                                <ul>
-                                    <li class="resumeDetail"> Microsoft Project, Microsft Excel, UML, ORCAD, Proteus, ModelSim, End
-                                        Note, Zotero
-                                    </li>
-                                    <li class="resumeDetail"> Familiar with: Software Engineering, Enterprise Architecture, Xilinx
-                                        ISE Design Suite, Maple, GeoGebra, Movie Maker, Pitivi
-                                    </li>
-                                </ul>
+                            <li class="resumeDetail"> 2012 – Math Diploma in Mofid1 High School [<a
+                                    href="http://drm2.mecp.ir/"
+                                    target="_blank"> link </a>]
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             <a name="workExperience">
-		<br>
-	    </a>
+                <br>
+            </a>
             <div class="card card-1 container-fluid">
-		<br>
+                <br>
                 <h3>Work Experience</h3>
-		<br>
+                <br>
                 <div class="div">
                     <div class="col-xs-12">
-                        <ul>
+                        <ul class="work-experience">
+                            <li class="resumeDetail"> 2015 - Web Developer at <a href="http://shiveh.com"
+                                                                                 target="_blank">
+                                Shiveh </a> - Current </li>
+                            <li class="resumeDetail"> 2017 - Full Stack Web Developer at
+                                <a href="https://sarashpazpapion.com/" target="_blank">sarashpazpapion</a></li>
                             <li class="resumeDetail"> 2015 - Freelance Web Developer</li>
-                            <li class="resumeDetail"> 2015 - Web Developer at <a href="http://shiveh.com" target="_blank">
-                                Shiveh </a></li>
-                            <li class="resumeDetail"> 2015 - Data Analyst for Summer Intership at <a href="http://farabord.com"
-                                                                                                     target="_blank"> Farabord </a>
+
+                            <li class="resumeDetail"> 2015 - Data Analyst for Summer Intership at <a
+                                    href="http://farabord.com"
+                                    target="_blank"> Farabord </a>
                             </li>
                             <li class="resumeDetail"> 2012 - Teaching Mathematics</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <a name="presentations">
-		<br>
-	    </a>
+
+            <a name="job_title">
+                <br>
+            </a>
             <div class="card card-1 container-fluid">
-		<br>
+                <br>
+                <h3>Job Title that I can work</h3>
+                <br>
+                <div class="div">
+
+                    <div class="col-xs-12">
+                        <ul class="job_title">
+                            <li> Senior Back-end Developer
+                                <ul>
+                                    <li class="resumeDetail">PHP</li>
+                                    <li class="resumeDetail">Python</li>
+                                    <li class="resumeDetail">Java</li>
+                                </ul>
+                            </li>
+                            <li> Senior Full Stack Developer</li>
+                            <li> Researcher </li>
+                            <li> Junior Database Administrator and Data Wrangler
+                                <ul>
+                                    <li class="resumeDetail"> PostgreSQL</li>
+                                    <li class="resumeDetail"> MySQL</li>
+                                </ul>
+                            </li>
+                            <li> Junior DevOps and SysAdmin </li>
+                            <li> Junior Front-end Developer </li>
+                            <li> Data Scientist </li>
+                            <li> Text Analyst </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <h6><a href="/resume.pdf">Can Find in detail here</a></h6>
+                <h6>-- Sorted by experience and knowledge --</h6>
+            </div>
+
+            <a name="presentations">
+                <br>
+            </a>
+            <div class="card card-1 container-fluid">
+                <br>
                 <h3>Presentations and Projects(in Persian)</h3>
-		<br>
+                <br>
                 <div class="div">
                     <div class="col-xs-12">
-                        <ol>
-                            <li class="resumeDetail"> Client side web application for manipulating hospital data(Technical View:
+                        <ol class="circle">
+                            <li class="resumeDetail">
+                                Daily Gifts: a game for finding words in a messed up words table
+                            </li>
+                            <li class="resumeDetail"> Client side web application for manipulating hospital
+                                data(Technical View:
                                 HTML(5), CSS(3), Javascript, jQuery, Bootstrap, XML, php)
                             </li>
                             <li class="resumeDetail"> Web Pages as DEMO for presenting work for datamining group of
                                 Farabord(technical view: HTML(5), CSS(3), Bootstrap, jQuery,
                                 javascript, datatables.js, amcharts.js, python(server-side) )
                             </li>
-                            <li class="resumeDetail"><a href="Text%20Classification"> Text Classifcation Presentation </a> for data
+                            <li class="resumeDetail"><a href="Text%20Classification"> Text Classifcation
+                                Presentation </a> for data
                                 mining course
                             </li>
                             <li class="resumeDetail"><a href="WebGL"> Webgl Presentation </a> for graphic course</li>
-                            <li class="resumeDetail"> Shiveh Corporation Site(In technical view: Wordpress, html, css, php,...)</li>
-                            <li class="resumeDetail"> Radsan-Rahdari(Project in Shiveh Corporation; in technical view: Zend,
+                            <li class="resumeDetail"> Shiveh Corporation Site(In technical view: Wordpress, html, css,
+                                php,...)
+                            </li>
+                            <li class="resumeDetail"> Radsan-Rahdari(Project in Shiveh Corporation; in technical view:
+                                Zend,
                                 (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, Klass, MVC)
                             </li>
-                            <li class="resumeDetail"> Web pages for presenting result of <a href="http://www.magsaco.ir">MAGSA</a>'s
-                                SOC project.(In technical view: PHP, HTML(5), CSS(3), Javascript, JQuery, amcharts.js, Bootstrap...)
+                            <li class="resumeDetail"> Web pages for presenting result of <a
+                                    href="http://www.magsaco.ir">MAGSA</a>'s
+                                SOC project.(In technical view: PHP, HTML(5), CSS(3), Javascript, JQuery, amcharts.js,
+                                Bootstrap...)
                             </li>
-                            <li class="resumeDetail"> Radsan-PersiIranGas(Project in Shiveh Corporation; in technical view: Zend,
+                            <li class="resumeDetail"> Radsan-PersiIranGas(Project in Shiveh Corporation; in technical
+                                view: Zend,
                                 (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, Klass, MVC)
                             </li>
-                            <li class="resumeDetail"> Apprenticeship Report on Data Mining(Document and Code in R Programming
+                            <li class="resumeDetail"> Apprenticeship Report on Data Mining(Document and Code in R
+                                Programming
                                 Language)
                             </li>
                             <li class="resumeDetail"> Research Method & Report Writing(Document)</li>
@@ -387,16 +401,17 @@
             </div>
 
             <a name="honors">
-		<br>
-	    </a>
+                <br>
+            </a>
             <div class="card card-1 container-fluid">
-		<br>
+                <br>
                 <h3>Honors</h3>
-		<br>
+                <br>
                 <div class="div">
                     <div class="col-xs-12">
                         <ul>
-                            <li class="resumeDetail"> Second place among accepted IT Students in Amirkabir University at Entrance
+                            <li class="resumeDetail"> Second place among accepted IT Students in Amirkabir University at
+                                Entrance
                                 Exam <br/>( 2 of 34)
                             </li>
                             <li class="resumeDetail"> Accepted in first level of Mathematics Olympiad ( 2011 )</li>
@@ -413,44 +428,45 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
-  $('li a[]')
+    $(document).ready(function () {
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            }
+                            ;
+                        });
+                    }
+                }
+            });
+        $('li a[]')
 
-});
+    });
 </script>
 </html>
