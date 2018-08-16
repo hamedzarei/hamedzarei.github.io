@@ -356,8 +356,8 @@
                 <div class="div">
                     <div class="col-xs-12">
                         <ol class="circle">
-                            <li class="resumeDetail"> Can see some of my projects source code in my
-                                <a href="http://hamedzarei.github.io/">github</a></li>
+                            <li class="resumeDetail"> <h4>Can see some of my projects source code in my
+                                <a href="http://hamedzarei.github.io/">github</a></h4></li>
                             <li class="resumeDetail">
                                 Daily Gifts: a game for finding words in a messed up words table
                             </li>
@@ -461,7 +461,7 @@
                     $('a[href*="#"]').css('color', 'white');
                     $(this).css('color', 'black');
                     var target = $(this.hash);
-                    location.hash = this.hash.slice(1);
+
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     // Does a scroll target exist?
                     if (target.length) {
@@ -483,6 +483,7 @@
                             ;
                         });
                     }
+                    location.hash = this.hash.slice(1);
                 }
             });
         $('li a[]')
