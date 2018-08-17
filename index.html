@@ -154,6 +154,30 @@
         .myImage {
             width: 100%;
         }
+
+        /**/
+        .progress {
+            margin-top: 5px;
+            height: 35px;
+
+        }
+        .progress .skill {
+            font: normal 12px "Open Sans Web";
+            line-height: 35px;
+            padding: 0;
+            margin: 0 0 0 20px;
+            text-transform: uppercase;
+        }
+        .progress .skill .val {
+            float: right;
+            font-style: normal;
+            margin: 0 20px 0 0;
+        }
+
+        .progress-bar {
+            text-align: left;
+            transition-duration: 3s;
+        }
     </style>
 </head>
 <body>
@@ -169,9 +193,9 @@
                     <li><a target="_self" href="#personal_information">Personal Information</a></li>
                     <li><a target="_self" href="#goal">My Objectives</a></li>
                     <li><a target="_self" href="#education">Education</a></li>
-                    <li><a target="_self" href="#job_title">Job Titles</a></li>
+                    <li><a target="_self" href="#job_title">Job Titles / Skills</a></li>
                     <li><a target="_self" href="#work_experience">Work Experience</a></li>
-                    <li><a target="_self" href="#presentations">Presentations</a></li>
+                    <li><a target="_self" href="#projects">Projects</a></li>
                     <li><a target="_self" href="#honors">Honors</a></li>
                     <li><a target="_self" href="resume.pdf">PDF</a></li>
                 </ul>
@@ -320,25 +344,117 @@
                     <div class="col-xs-12">
                         <ul class="job_title">
                             <li> Senior Back-end Developer
-                                <ul>
-                                    <li class="resumeDetail">PHP</li>
-                                    <li class="resumeDetail">Python</li>
-                                    <li class="resumeDetail">Java</li>
-                                </ul>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">PHP<i class="val">90%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">Python<i class="val">70%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">NodeJS - Java - Kotlin<i class="val">40%</i></span>
+                                    </div>
+                                </div>
+                                <!--<ul>-->
+                                    <!--<li class="resumeDetail">PHP</li>-->
+                                    <!--<li class="resumeDetail">Python</li>-->
+                                    <!--<li class="resumeDetail">Java - Kotlin - NodeJS</li>-->
+                                <!--</ul>-->
                             </li>
                             <li> Senior Full Stack Developer</li>
-                            <li> Researcher </li>
+                            <li> Researcher (R&D) </li>
                             <li> Junior Database Administrator and Data Wrangler
-                                <ul>
-                                    <li class="resumeDetail"> PostgreSQL</li>
-                                    <li class="resumeDetail"> MySQL</li>
-                                </ul>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">PostgreSQL<i class="val">80%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">MySQL<i class="val">70%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">MongoDB<i class="val">40%</i></span>
+                                    </div>
+                                </div>
+                                <!--<ul>-->
+                                    <!--<li class="resumeDetail"> PostgreSQL</li>-->
+                                    <!--<li class="resumeDetail"> MySQL</li>-->
+                                    <!--<li class="resumeDetail">MongoDB</li>-->
+                                <!--</ul>-->
                             </li>
-                            <li> Junior DevOps and SysAdmin </li>
-                            <li> Junior Front-end Developer </li>
-                            <li> Data Scientist </li>
-                            <li> Text Analyst </li>
+                            <li> Junior DevOps and SysAdmin
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">Ubuntu - Docker - Shell Scripting<i class="val">80%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">CentOS<i class="val">30%</i></span>
+                                    </div>
+                                </div>
+                                <!--<ul>-->
+                                    <!--<li class="resumeDetail">Ubuntu - Docker - Shell Scripting</li>-->
+                                    <!--<li class="resumeDetail">CentOS</li>-->
+                                <!--</ul>-->
+                            </li>
+                            <li> Junior Front-end Developer
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">HTML - CSS - JS - JQuery - Bootstrap<i class="val">90%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">AngularJS(1)<i class="val">50%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">Vue.js<i class="val">10%</i></span>
+                                    </div>
+                                </div>
+                                <!--<ul>-->
+                                    <!--<li class="resumeDetail">HTML - CSS - JS - JQuery - Bootstrap</li>-->
+                                    <!--<li class="resumeDetail">AngularJS(1)</li>-->
+                                    <!--<li class="resumeDetail">Vue.js</li>-->
+                                <!--</ul>-->
+                            </li>
+                            <li> Data Scientist
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">Python(Scikit-Learn) - R - Weka<i class="val">80%</i></span>
+                                    </div>
+                                </div>
 
+                                <!--<ul>-->
+                                    <!--<li class="resumeDetail">Python(Scikit-Learn) - R - Weka</li>-->
+                                    <!--<li class="resumeDetail">Matlab</li>-->
+                                <!--</ul>-->
+                            </li>
+                            <li> Text Analyst
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">NLTK<i class="val">80%</i></span>
+                                    </div>
+                                </div>
+                                <div class="progress skill-bar">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" >
+                                        <span class="skill">gensim<i class="val">50%</i></span>
+                                    </div>
+                                </div>
+                                <!--<ul>-->
+                                    <!--<li class="resumeDetail">NLTK</li>-->
+                                    <!--<li class="resumeDetail">gensim</li>-->
+                                <!--</ul>-->
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -346,18 +462,21 @@
                 <h6>-- Sorted by experience and knowledge --</h6>
             </div>
 
-            <a name="presentations">
+            <a name="projects">
                 <br>
             </a>
             <div class="card card-1 container-fluid">
                 <br>
-                <h3>Presentations and Projects</h3>
+                <h3>Projects</h3>
                 <br>
                 <div class="div">
                     <div class="col-xs-12">
                         <ol class="circle">
                             <li class="resumeDetail"> <h4>Can see some of my projects source code in my
                                 <a href="http://hamedzarei.github.io/">github</a></h4></li>
+                            <li class="resumeDetail"> Map and GIS services for public people and business <a href="https://map.ir"> map.ir</a></li>
+                            <li class="resumeDetail"><a href="http://sina.post.ir" target="_blank">Sina</a> and Gnaf Project for Post; services on integrated data
+                            </li>
                             <li class="resumeDetail">
                                 Daily Gifts: a game for finding words in a messed up words table
                             </li>
@@ -374,38 +493,22 @@
                                 mining course
                             </li>
                             <li class="resumeDetail"><a href="WebGL"> Webgl Presentation </a> for graphic course</li>
-                            <li class="resumeDetail"> Shiveh Corporation Site(In technical view: Wordpress, html, css,
-                                php,...)
-                            </li>
-                            <li class="resumeDetail"> Radsan-Rahdari(Project in Shiveh Corporation; in technical view:
-                                Zend,
-                                (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, Klass, MVC)
-                            </li>
+
                             <li class="resumeDetail"> Web pages for presenting result of <a
                                     href="http://www.magsaco.ir">MAGSA</a>'s
                                 SOC project.(In technical view: PHP, HTML(5), CSS(3), Javascript, JQuery, amcharts.js,
                                 Bootstrap...)
                             </li>
-                            <li class="resumeDetail"> Radsan-PersiIranGas(Project in Shiveh Corporation; in technical
+                            <li class="resumeDetail"> Radsan-Project-Series(Project in Shiveh Corporation; in technical
                                 view: Zend,
-                                (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, Klass, MVC)
+                                (X)HTML, CSS, Javascript, jQuery, Openlayers, AngularJS, MVC)
                             </li>
                             <li class="resumeDetail"> Apprenticeship Report on Data Mining(Document and Code in R
                                 Programming
                                 Language)
                             </li>
-                            <li class="resumeDetail"> Research Method & Report Writing(Document)</li>
-                            <li class="resumeDetail"> Project of Software Engineering 2(Document)</li>
-                            <li class="resumeDetail"> Project of Signals and Systems(Convolution Sum)(Java)</li>
-                            <li class="resumeDetail"> Final Project of Strategic Planning(Document)</li>
-                            <li class="resumeDetail"> Strategic Planning Process of Social Media(Research for Strategic
-                                Planning)(Document)
-                            </li>
-                            <li class="resumeDetail"> The First Project of Software Engineering 1(Document)</li>
-                            <li class="resumeDetail"> The Second Project of Software Engineering 1(Document)</li>
-                            <li class="resumeDetail"> Project of Computer Architecture(with Proteus)</li>
-                            <li class="resumeDetail"> Project of Electonic Circuit(with Orcad)</li>
-                            <li class="resumeDetail"> Final Project of Fundamental of Management(Document)</li>
+
+
                         </ol>
 
                     </div>
@@ -441,11 +544,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
+        $('.progress .progress-bar').css("width",
+            function() {
+                return $(this).attr("aria-valuenow") + "%";
+            }
+        );
+
         if ($('a[href="'+location.hash+'"]').length == 0) {
             $('a[href="#personal_information"]').css('color', 'black');
         } else {
             $('a[href="'+location.hash+'"]').css('color', 'black');
         }
+
         $('a[href*="#"]')
         // Remove links that don't actually link to anything
             .not('[href="#"]')
