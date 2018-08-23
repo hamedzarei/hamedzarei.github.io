@@ -142,6 +142,10 @@
             float: left;
         }
 
+        .navbar-toggle.close {
+            float: right;
+        }
+
         .myImage {
             width: 100%;
         }
@@ -181,39 +185,39 @@
             }
         }
 
-        @media only screen and (max-width: 741px) and (min-width: 560px)  {
-            button.navbar-toggle {
-                display: none;
-            }
-            .navbar-collapse {
-                display: inline-block;
-                border-color: #4aa3df !important;
-            }
-            .navbar-collapse li {
-                display: inline-block;
-            }
+        /*@media only screen and (max-width: 741px) and (min-width: 560px)  {*/
+            /*button.navbar-toggle {*/
+                /*display: none;*/
+            /*}*/
+            /*.navbar-collapse {*/
+                /*display: inline-block;*/
+                /*border-color: #4aa3df !important;*/
+            /*}*/
+            /*.navbar-collapse li {*/
+                /*display: inline-block;*/
+            /*}*/
 
-            .navbar {
+            /*.navbar {*/
 
-                position: fixed;
-                z-index: 100;
-                background-color: rgba(142, 186, 235, 1);
-                border-color: #4aa3df;
-            }
+                /*position: fixed;*/
+                /*z-index: 100;*/
+                /*background-color: rgba(142, 186, 235, 1);*/
+                /*border-color: #4aa3df;*/
+            /*}*/
 
-            .navbar-inverse .navbar-nav > li > a {
-                color: #999999;
-                font-size: 0.8em;
-            }
-            .navbar-inverse .navbar-nav > li > a:hover {
-                color: #fff !important;
-                background-color: transparent !important;
-            }
+            /*.navbar-inverse .navbar-nav > li > a {*/
+                /*color: #999999;*/
+                /*font-size: 0.8em;*/
+            /*}*/
+            /*.navbar-inverse .navbar-nav > li > a:hover {*/
+                /*color: #fff !important;*/
+                /*background-color: transparent !important;*/
+            /*}*/
 
-            .nav > li > a {
-                padding: 0.7vw;
-            }
-        }
+            /*.nav > li > a {*/
+                /*padding: 0.7vw;*/
+            /*}*/
+        /*}*/
 
     </style>
 </head>
@@ -228,7 +232,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+                <button type="button" class="navbar-toggle close">
+                    &#10008;
+                </button>
             </div>
             <div class="col-lg-2"></div>
             <div class="col-lg-8 col-xs-12 collapse navbar-collapse" id="myNavbar">
@@ -589,6 +595,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
+        $('.navbar-toggle.close').click(function () {
+            $('#myNavbar').attr('aria-expanded', false).removeClass('in');
+            $('.navbar-toggle').addClass('collapsed');
+            $('.navbar-toggle').attr('aria-expanded', false);
+        });
         $('.progress .progress-bar').css("width",
             function() {
                 return $(this).attr("aria-valuenow") + "%";
