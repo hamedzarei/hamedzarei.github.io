@@ -19,10 +19,14 @@
         /*}*/
         /*#8EBAEB*/
 
+        * {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
         body {
             background: url("images/background.png");
             background-repeat: repeat;
-            color: #999999;
+            color: black;
         }
 
         .card:not(.myImage) {
@@ -102,71 +106,60 @@
         }
 
         .resumeDetail:hover {
-            color: black;
+            color: #999999;
         }
 
-        .navbar {
-            width: 100%;
-            position: fixed;
-            z-index: 100;
-            margin-top: 0px;
-        }
-
-        .navbar * {
-            padding: 0;
-            padding-left: 5px;
-        }
-
-        .navbar ul {
-            margin: auto;
-        }
-
-        .navbar li {
-            display: inline-block;
-            padding: 0px;
-        }
-
-        .nvabar li a {
-            margin: 0px;
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
 
         .content {
             padding-top: 70px;
         }
 
-        .navbar-inverse {
-            /*background-color: #8EBAEB;*/
-            background-color: rgba(142, 186, 235, 0.7);
+        /*
+        navigation
+         */
+        .navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            background-color: rgba(142, 186, 235, 1);
             border-color: #4aa3df;
         }
+
         .navbar-inverse .navbar-nav > li > a {
-            color: white;
-            font-size: 125%;
+            color: #999999;
+            /*font-size: 1em;*/
+        }
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: #fff !important;
+            background-color: transparent !important;
         }
 
         .nav > li > a {
-            padding: 0.8vw;
+            padding: 0.7vw;
+        }
+
+        button.navbar-toggle {
+            float: left;
         }
 
         .myImage {
             width: 100%;
         }
 
-        /**/
+        /***
+        progress skill
+         */
         .progress {
             margin-top: 5px;
             height: 35px;
 
         }
         .progress .skill {
-            font: normal 12px "Open Sans Web";
+            font-size: 12px;
             line-height: 35px;
             padding: 0;
             margin: 0 0 0 20px;
-            text-transform: uppercase;
+            /*text-transform: uppercase;*/
         }
         .progress .skill .val {
             float: right;
@@ -178,6 +171,50 @@
             text-align: left;
             transition-duration: 3s;
         }
+
+        @media only screen and (min-width: 742px)  {
+            .navbar {
+                width: 100%;
+            }
+            .navbar-inverse .navbar-nav > li > a {
+                font-size: 1em;
+            }
+        }
+
+        @media only screen and (max-width: 741px) and (min-width: 560px)  {
+            button.navbar-toggle {
+                display: none;
+            }
+            .navbar-collapse {
+                display: inline-block;
+                border-color: #4aa3df !important;
+            }
+            .navbar-collapse li {
+                display: inline-block;
+            }
+
+            .navbar {
+
+                position: fixed;
+                z-index: 100;
+                background-color: rgba(142, 186, 235, 1);
+                border-color: #4aa3df;
+            }
+
+            .navbar-inverse .navbar-nav > li > a {
+                color: #999999;
+                font-size: 0.8em;
+            }
+            .navbar-inverse .navbar-nav > li > a:hover {
+                color: #fff !important;
+                background-color: transparent !important;
+            }
+
+            .nav > li > a {
+                padding: 0.7vw;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -185,9 +222,16 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
+            </div>
             <div class="col-lg-2"></div>
-            <div class="col-lg-8 col-xs-12">
+            <div class="col-lg-8 col-xs-12 collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
 
                     <li><a target="_self" href="#personal_information">Personal Information</a></li>
@@ -542,6 +586,7 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.progress .progress-bar').css("width",
@@ -568,7 +613,7 @@
                     location.hostname == this.hostname
                 ) {
                     // Figure out element to scroll to
-                    $('a[href*="#"]').css('color', 'white');
+                    $('a[href*="#"]').css('color', '#999999');
                     $(this).css('color', 'black');
                     var target = $(this.hash);
 
