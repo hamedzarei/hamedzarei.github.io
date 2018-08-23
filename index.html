@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Hamed Zarei Home Page">
     <meta name="keywords" content="hamed,zarei,homepage,حامد,زارعی,web,web developer, full stack web developer,laravel,
         lumen">
@@ -114,6 +115,10 @@
             padding-top: 70px;
         }
 
+        .myImage {
+            width: 100%;
+        }
+
         /*
         navigation
          */
@@ -138,18 +143,6 @@
             padding: 0.7vw;
         }
 
-        button.navbar-toggle {
-            float: left;
-        }
-
-        .navbar-toggle.close {
-            float: right;
-        }
-
-        .myImage {
-            width: 100%;
-        }
-
         /***
         progress skill
          */
@@ -163,7 +156,6 @@
             line-height: 35px;
             padding: 0;
             margin: 0 0 0 20px;
-            /*text-transform: uppercase;*/
         }
         .progress .skill .val {
             float: right;
@@ -176,81 +168,30 @@
             transition-duration: 3s;
         }
 
-        @media only screen and (min-width: 742px)  {
-            .navbar {
-                width: 100%;
-            }
-            .navbar-inverse .navbar-nav > li > a {
-                font-size: 1em;
-            }
-        }
-
-        /*@media only screen and (max-width: 741px) and (min-width: 560px)  {*/
-            /*button.navbar-toggle {*/
-                /*display: none;*/
-            /*}*/
-            /*.navbar-collapse {*/
-                /*display: inline-block;*/
-                /*border-color: #4aa3df !important;*/
-            /*}*/
-            /*.navbar-collapse li {*/
-                /*display: inline-block;*/
-            /*}*/
-
-            /*.navbar {*/
-
-                /*position: fixed;*/
-                /*z-index: 100;*/
-                /*background-color: rgba(142, 186, 235, 1);*/
-                /*border-color: #4aa3df;*/
-            /*}*/
-
-            /*.navbar-inverse .navbar-nav > li > a {*/
-                /*color: #999999;*/
-                /*font-size: 0.8em;*/
-            /*}*/
-            /*.navbar-inverse .navbar-nav > li > a:hover {*/
-                /*color: #fff !important;*/
-                /*background-color: transparent !important;*/
-            /*}*/
-
-            /*.nav > li > a {*/
-                /*padding: 0.7vw;*/
-            /*}*/
-        /*}*/
-
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="row">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <button type="button" class="navbar-toggle close">
-                    &#10008;
-                </button>
-            </div>
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8 col-xs-12 collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-
-                    <li><a target="_self" href="#personal_information">Personal Information</a></li>
-                    <li><a target="_self" href="#goal">My Objectives</a></li>
-                    <li><a target="_self" href="#education">Education</a></li>
-                    <li><a target="_self" href="#work_experience">Work Experience</a></li>
-                    <li><a target="_self" href="#job_title">Job Titles / Skills</a></li>
-                    <li><a target="_self" href="#projects">Projects</a></li>
-                    <li><a target="_self" href="#honors">Honors</a></li>
-                    <li><a target="_self" href="resume.pdf">PDF</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2"></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a target="_self" href="#personal_information">Personal Information</a></li>
+                <li><a target="_self" href="#goal">My Objectives</a></li>
+                <li><a target="_self" href="#education">Education</a></li>
+                <li><a target="_self" href="#work_experience">Work Experience</a></li>
+                <li><a target="_self" href="#job_title">Job Titles / Skills</a></li>
+                <li><a target="_self" href="#projects">Projects</a></li>
+                <li><a target="_self" href="#honors">Honors</a></li>
+                <li><a target="_self" href="resume.pdf">PDF</a></li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -595,7 +536,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('.navbar-toggle.close').click(function () {
+        $('body').click(function () {
             $('#myNavbar').attr('aria-expanded', false).removeClass('in');
             $('.navbar-toggle').addClass('collapsed');
             $('.navbar-toggle').attr('aria-expanded', false);
