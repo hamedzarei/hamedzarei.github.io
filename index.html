@@ -183,6 +183,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
+                <li><a target="_self" href="#current_status">Current Status</a></li>
                 <li><a target="_self" href="#personal_information">Personal Information</a></li>
                 <li><a target="_self" href="#goal">My Objectives</a></li>
                 <li><a target="_self" href="#education">Education</a></li>
@@ -204,6 +205,23 @@
             <img class="card card-1 myImage" src="images/hamedzarei.jpg" alt="hamed zarei">
         </div>
         <div class="col-lg-8 col-md-9 col-xs-12">
+
+            <a name="current_status">
+                <br>
+            </a>
+            <div class="card card-1 container-fluid">
+                <br>
+                <h3>
+                    Current Status
+                </h3>
+                <br>
+                <div class="row resumeDetail">
+                    <div class="col-xs-12">
+                        Seeking for Part-Time Job as my second job!
+                    </div>
+                </div>
+            </div>
+
 
             <a name="personal_information">
                 <br>
@@ -548,7 +566,7 @@
         );
 
         if ($('a[href="'+location.hash+'"]').length == 0) {
-            $('a[href="#personal_information"]').css('color', 'black');
+            $('a[href="#current_status"]').css('color', 'black');
         } else {
             $('a[href="'+location.hash+'"]').css('color', 'black');
         }
