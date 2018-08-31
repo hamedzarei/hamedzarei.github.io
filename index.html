@@ -183,7 +183,6 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a target="_self" href="#current_status">Current Status</a></li>
                 <li><a target="_self" href="#personal_information">Personal Information</a></li>
                 <li><a target="_self" href="#goal">My Objectives</a></li>
                 <li><a target="_self" href="#education">Education</a></li>
@@ -566,7 +565,7 @@
         );
 
         if ($('a[href="'+location.hash+'"]').length == 0) {
-            $('a[href="#current_status"]').css('color', 'black');
+            $('a[href="#personal_information"]').css('color', 'black');
         } else {
             $('a[href="'+location.hash+'"]').css('color', 'black');
         }
