@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f41acff7-436c-46ee-9054-55319431ad60" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="f41acff7-436c-46ee-9054-55319431ad60" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +33,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="421" column="103" selection-start-line="421" selection-start-column="103" selection-end-line="421" selection-end-column="103" />
+            <state relative-caret-position="304">
+              <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
               <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                 <element signature="e#917#1012#0" />
                 <element signature="e#1027#1157#0" />
                 <element signature="e#1187#1380#0" />
@@ -279,12 +275,12 @@
       <workItem from="1535045707136" duration="7774000" />
       <workItem from="1535659927177" duration="1336000" />
       <workItem from="1535706890542" duration="35000" />
-      <workItem from="1545767348418" duration="840000" />
+      <workItem from="1545767348418" duration="1208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29504000" />
+    <option name="totallyTimeSpent" value="29872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="97" y="1" width="3104" height="1800" extended-state="6" />
@@ -321,11 +317,9 @@
     <entry file="file://$PROJECT_DIR$/back.php" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="421" column="103" selection-start-line="421" selection-start-column="103" selection-end-line="421" selection-end-column="103" />
+        <state relative-caret-position="304">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="e#917#1012#0" />
             <element signature="e#1027#1157#0" />
             <element signature="e#1187#1380#0" />
