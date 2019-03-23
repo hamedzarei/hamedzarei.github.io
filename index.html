@@ -168,6 +168,21 @@
             transition-duration: 3s;
         }
 
+        .row-table {
+            display: table;
+            width: 100%;
+        }
+        .col-table {
+            display: table-cell;
+            padding: 16px;
+            height: 300px;
+            line-height: 300px;
+            vertical-align: middle;
+            /*border: solid black;*/
+        }
+        .col-table img {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -189,6 +204,7 @@
                 <li><a target="_self" href="#work_experience">Work Experience</a></li>
                 <li><a target="_self" href="#job_title">Job Titles / Skills</a></li>
                 <li><a target="_self" href="#projects">Projects</a></li>
+                <li><a target="_self" href="#presentations">Presentations</a></li>
                 <li><a target="_self" href="#honors">Honors</a></li>
                 <li><a target="_self" href="resume.pdf">PDF</a></li>
             </ul>
@@ -522,6 +538,36 @@
                     </div>
                 </div>
             </div>
+
+
+            <a name="presentations">
+                <br>
+            </a>
+            <div class="card card-1 container-fluid">
+                <br>
+                <h3>Presentations</h3>
+                <br>
+                <div>
+                   <div class="row row-table">
+                       <div class="col-xs-3 col-table">
+                           <a href="/WebGL" title="webgl">
+                               <img src="WebGL/images/webgl.png" alt="WebGL">
+                           </a>
+                       </div>
+                       <div class="col-xs-3 col-table">
+                           <a href="/Text%20Classification" title="text classification">
+                               <img src="Text%20Classification/images/feature-selection.png" alt="Text Classification">
+                           </a>
+                       </div>
+                       <!--<div class="col-xs-3 col-table">-->
+                           <!--<a href="/Redis" title="redis">-->
+                               <!--<img src="Redis/images/redis-1.png" alt="Redis">-->
+                           <!--</a>-->
+                       <!--</div>-->
+                   </div>
+                </div>
+            </div>
+
 
             <a name="honors">
                 <br>
