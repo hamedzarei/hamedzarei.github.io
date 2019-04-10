@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Text Classification</title>
+    <title>Redis</title>
     <meta name="description" content="" />
     <meta name="author" content="pooria barghi" />
 
@@ -22,330 +22,162 @@
 
 	<!-- main slide -->
 		<div id="main-slide" class="step" data-x="700" data-z="700" data-rotate-y="-80">
-        	<!--<div class="logo-container"> -->
-            	<span style="position: absolute" class="fit_image_80"><img style="opacity: 0.5" class="full-width" src="images/redis-1.png" /></span>
-        	<!--</div> -->
-        	<h1 style="margin-top:-100px; margin-bottom:300px;">آشنایی با Redis</h1>
+            <br>
+            <h1 style="margin-top:-100px; margin-bottom:300px;">Redis</h1>
+            <div class="logo-container">
+                <img style="opacity: 0.8; width: 40%; float: left;" src="images/redis-1.png" />
+                <img style="opacity: 0.8; width: 40%; float: right;" src="images/map-logo-1.png" />
+            </div>
 
         	<!--<p class="author">1398</p>-->
         </div>
 		
 	<!-- table of content -->
-        <div id="table-of-content" class="step">
-            بخش ١ : مقدمه - آشنایی با انواع پایگاه داده<br>
-            بخش ۲ : نوع داده<br>
-			بخش ٣ : دسته بندی با Naive Bayes<br>
-			بخش ۴ : Sentiment Analysis<br>
-            خلاصه
+        <div style="clear: both;" id="table-of-content" class="step">
+            Part 1: Introduction<br>
+            Part 2: Basic(Data Types, Commands)<br>
+			Part 3: Pipeline & Pub/Sub <br>
+			Part 4: Clustering<br>
+            Part 5: Summary
         </div>
 
 	<!-- section 1 -->
-        <div class="section section-start step" data-section="1" data-section-title="بخش ١ : مقدمه">
-            <h2>بخش ١<br>مقدمه</h2>
+        <div class="section section-start step" data-section="1" data-section-title="Part 1: Introduction">
+            <h2>Part 1<br>Introduction</h2>
         </div>
 		
 		<!-- slide 1-1 -->
         <div class="section slide step" data-section="1">
-            <span class="fit_image"> <img class="full-width" src="images/IBM-watson.jpg" /> </span>
+            <span class="fit_image"> <img class="full-width" src="images/nosql-vs-sql.png" /> </span>
         </div>
 	
 		<!-- slide 1-2 -->
         <div class="section slide step" data-section="1">
             <div class="center">
-            	<h2> استخراج اطلاعات</h2>
+            	<h2>Who's using Redis?</h2>
             </div>
-			<span class="fit_image"> <img class="full-width" src="images/information_extraction_example.png" /> </span>
+			<div>
+                <img src="images/twitter-logo-blue.png" height="100" alt="">
+                <img src="images/github-mark.png" height="100" alt="">
+                <img src="images/stackoverflow.jpg" height="100" alt="">
+            </div>
         </div>
 		
 		<!-- slide 1-3 -->
         <div class="section slide step" data-section="1">
             <div class="center">
-            	<h2> ترجمه با ماشین</h2>
+            	<h2>Use Cases</h2>
             </div>
-			<span class="fit_image"> <img class="full-width" src="images/machine-translation.jpg" /> </span>
-        </div>
-		
-		<!-- slide 1-4 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> چرا فهم زبان طبیعی سخت است؟</h2>
+			<div>
+                <ul>
+                    <li>Cache</li>
+                    <li>Queues</li>
+                    <li>Full Text Search</li>
+                    <li>Geospatial Data</li>
+                    <li><a href="https://redislabs.com/solutions/use-cases/">more</a></li>
+                </ul>
             </div>
-			<ul class="no-margin no-bulet">
-            	<li>وجود اصطلاحات</li>
-				<li>استفاده از کلمات غیر استاندارد</li>
-				<li> وجود مشابهات در جهان که ایجاد تناقض کند</li>
-				<li> شکسته شدن لغات!!! </li>
-            </ul>
-        </div>
-	
-		<!-- slide 1-5 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> خب حالا چجوری این داده ها را استخراج کنیم؟!؟</h2>
-				<p class="second_title"> Regular Expression</p>
-            </div>
-			<span class="fit_image"> <img class="full-width" src="images/regular_expression.png" /> </span>
-        </div>
-
-		<!-- slide 1-6 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> دیگر به چی نیاز داریم؟</h2>
-            </div>
-			<ul class="no-margin no-bulet">
-				<br>
-				<li> تکه تکه کردن جملات</li>
-				<br>
-				<li> نرمال کردن لغات</li>
-			</ul>
-        </div>
-		
-		<!-- slide 1-7 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> ساختن درختی دو دویی...</h2>
-            </div>
-			<span class="fit_image"> <img class="full-width" src="images/EOS.png" /> </span>
-        </div>
-		
-		<!-- slide 1-8 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> خب چجوری دو تا رشته رو با هم مقایسه کنیم!؟</h2>
-				<br /> <br /> <br />
-				<h2> INTENTION </h2>
-				<h2> EXECUTION </h2>
-            </div>
-        </div>
-		
-		<!-- slide 1-9 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> Minimum Edit Distance</h2>
-            </div>
-			<span class="fit_image_80"> <img class="full-width" src="images/two_string_comparing.png" /> </span>
-			<p> از جمله کارهایی که برای بهبود این روش انجام می شود: Backtrace و Weighted MED</p>
-        </div>
-		
-		<!-- slide 1-10 -->
-        <div class="section slide step" data-section="1">
-            <div class="center">
-            	<h2> N-gram</h2>
-            </div>
-			<ul class="no-margin no-bulet">
-				<li class="latin"> Its water is so transparent that + the </li>
-				<li class="latin"> P(the |  it's water is so transparent) </li><br/> <br/>
-			</ul>
-			<ul class="no-margin no-bulet">
-				<li> کاربردها: </li>
-				<li > تشخیص صدا
-					<ul class="no-margin no-bulet">
-						<li class="latin"> P(I saw a van) >> P(eyes awe of an) </li>
-					</ul>
-				</li><br />
-				<li> تصحیح کردن تلفظ
-					<ul class="no-margin no-bulet">
-						<li class="latin"> P(about fifteen minutes from) > P(about fifteen minuets from)</li>
-					</ul>
-				</li>
-			</ul>
         </div>
 
     <!-- section 2 -->
-        <div class="section section-start step" data-section="2" data-section-title="بخش ٢ : دسته بندی متون">
-            <h2>بخش ٢<br>دسته بندی متون</h2>
+        <div class="section section-start step" data-section="2" data-section-title="Part 2: Basic(Data Types, Commands)">
+            <h2>Part 2 <br> Basic(Data Types, Commands)</h2>
         </div>
 		
 		<!-- slide 2-1 -->
         <div class="section slide step" data-section="2">
-            <h2>آیا این ایمیل spam است ؟</h2><br>
-            <div class="center">
-            	<img src="images/spam.png" alt="" width="100%">
-            </div>
+            <h2>String</h2><br>
+            <ul>
+                <li>SET</li>
+                <li>GET</li>
+                <li>INCR</li>
+                <li>DECR</li>
+            </ul>
         </div>
 
         <!-- slide 2-2 -->
         <div class="section slide step" data-section="2">
-            <h2>نویسنده این نوشته ها خانم است یا آقا ؟</h2><br>
-            <div class="center">
-            	<img src="images/gender.png" alt="" width="100%">
-            </div>
+            <h2>Lists</h2><br>
+            <ul>
+                <li>LPUSH</li>
+                <li>RPUSH</li>
+                <li>LRANGE</li>
+                <li>LTRIM</li>
+            </ul>
         </div>
 
         <!-- slide 2-3 -->
         <div class="section slide step" data-section="2">
-            <h2>نظرات مثبت و منفی درباره محصولات ، فیلم ، موسیقی ؟</h2><br>
-           	<ul>
-           		<li>به طور باورنکردنی نا امید کننده بود. - </li>
-           		<li>این بهترین فیلم کمدی است که تا به حال دیدم. + </li>
-           		<li>بازیگران ، بسیار هنرمندانه بازی کردند. +</li>
-           	</ul> 
+            <h2>Sets</h2><br>
+            <ul>
+                <li>SADD</li>
+                <li>SREM</li>
+                <li>SMEMBERS</li>
+                <li>SISMEMBER</li>
+            </ul>
         </div>
 
         <!-- slide 2-4 -->
         <div class="section slide step" data-section="2">
-            <h2>مثال های دیگر از کاربرد دسته بندی متون</h2><br>
-           	<ul>
-           		<li>تعیین نویسنده یک متن</li>
-           		<li>تعیین موضوع یک مقاله</li>
-           		<li>تعیین زبان یک نوشته یا مقاله</li>
-           		<li>sentiment Analysis</li>
-           	</ul> 
-        </div>
-
-        <!-- slide 2-5 -->
-        <div class="section slide step" data-section="2">
-            <h2>تعریف text classification</h2>
-           	<ul>
-           		<li>ورودی
-					<ul>
-						<li>یک متن (d)</li>
-						<li>تعداد ثابتی کلاس <bdi>C = { c1, c2, ... ,cj }</bdi></li>
-					</ul>
-           		</li>
-           		<li>خروجی
-					<ul>
-						<li>پیش بینی یک کلاس برای متن ورودی</li>
-					</ul>
-           		</li>
-           	</ul> 
-        </div>
-
-        <!-- slide 2-6 -->
-        <div class="section slide step" data-section="2">
-            <h2>روش های دسته بندی</h2>
-           	<ul>
-           		<li>Hand-coded rules
-					<ul>
-						<li>یک سری قانون براساس کلمات یا بقیه ویژگی ها</li>
-						در تشخیص اسپم > کلماتی مثل : پول ، شما برنده شده اید و ... <br>
-						آدرس هایی که در لیست سیاه هستند.
-						<li>دقت ممکن است بسیار بالا باشد.</li>
-						<li>ولی هزینه زیاد است.</li>
-					</ul>
-           		</li>
-           	</ul> 
-        </div>
-		
-		<!-- slide 2-7 -->
-        <div class="section slide step" data-section="2">
-            <h2>روش های دسته بندی</h2>
-           	<ul>
-           		<li>یادگیری با نظارت
-					<ul>
-						<li>ورودی</li>
-						یک متن (d)<br>
-						تعداد ثابتی کلاس <bdi>C = { c1, c2, ... ,cj }</bdi><br>
-						m تا داده آموزش (d1, c1), ... ,(dm, cm) 
-						<li>خروجی</li>
-						الگوریتم یاد گرفته شده. (classifier)
-					</ul>
-           		</li>
-           	</ul>
+            <h2>Hashes</h2><br>
+            <ul>
+                <li>HSET</li>
+                <li>HGET</li>
+                <li>HDEL</li>
+                <li>HGETALL</li>
+            </ul>
         </div>
 
     <!-- section 3 -->
-    	<div class="section section-start step" data-section="3" data-section-title="بخش ٣ : دسته بندی با Naive Bayes">
-            <h2>بخش ٣<br>دسته بندی با Naive Bayes</h2>
+    	<div class="section section-start step" data-section="3" data-section-title="Part 3: Pipeline & Pub/Sub">
+            <h2>Part 3 <br> Pipeline & Pub/Sub</h2>
         </div>
 
         <!-- slide 3-1 -->
         <div class="section slide step" data-section="3">
-            <h2>Bag of words</h2><br>
+            <h2>Pipeline</h2><br>
            	<div class="center">
-           		<img src="images/bag_of_words.png" alt="" width="100%">
+           		<img src="images/pipeline.png" alt="" width="100%">
            	</div>
         </div>
 
         <!-- slide 3-2 -->
         <div class="section slide step" data-section="3">
-            <h2>Bag of words</h2></br>
+            <h2>Pipeline</h2>
+            <img src="images/pipeline_example.png" alt="" height="400">
            	<div class="center">
-           		<img src="images/bag_of_words2.png" alt="" width="100%">
+
+                <img src="images/pipeline_example_time.png" alt="">
            	</div>
+            
         </div>
 
-        <!-- slide 3-3 -->
-        <div class="section slide step" data-section="3">
-         	<h2>قانون بیز</h2></br>
-        	<div class="center">
-        		<img src="images/beys.png" alt="" width="100%">
-        	</div>
-		</div>
-
-        <!-- slide 3-4 -->
-        <div class="section slide step" data-section="3">
-            <img src="images/ex.png" alt="">
-            <img src="images/f1.png" alt="" style="position:absolute; left: 300px; top:275px;">
-            <img src="images/f2.png" alt="" style="position:absolute; right: 40px; top:300px;">
-            <img src="images/f3.png" alt="" style="position:absolute; left: 20px; top:290px;">
-            <img src="images/f4.png" alt="" style="position:absolute; left: 20px; top:390px;" width="450px">
-            <img src="images/f5.png" alt="" style="position:absolute; right: 20px; top:390px;" width="400px">
-        </div>
-
-        <!-- slide 3-5 -->
-        <div class="section slide step" data-section="3">
-            <h2>دسته بندی مقالات رویترز</h2>
-            <ul class="no-margin">
-                <li>9603 داده آموزش</li>
-                <li>3299 داده تست</li>
-                <li>118 دسته</li>
-            </ul>
-            <div class="center">
-                <img src="images/reuters.png" alt="" width="100%">
-            </div>
-        </div>
-
-        <!-- slide 3-6 -->
-        <div class="section slide step" data-section="3">
-            <h2>جمع بندی کلی</h2>
-            <ul>
-            	<li>بسیار سریع است.</li>
-            	<li>فضای ذخیره سازی زیادی لازم ندارد.</li>
-            	<li>ولی اگر داده های آموزش کم باشد بهتر است از الگوریتم های دیگر استفاده کنیم.</li>
-            	<li>اگر داده های آموزش زیاد باشد فرقی نمی کند که از چه الگوریتمی استفاده کنیم.</li>
-            </ul>
-        </div>
-
-        <!-- slide 3-7 -->
-        <div class="section slide step" data-section="3">
-            <h2>مقایسه</h2>
-            <div class="center">
-            	<img src="images/compare.png" alt="">
-            </div>
-        </div>
 
     <!-- section 4 -->
-    	<div class="section section-start step" data-section="4" data-section-title="بخش ۴ : Sentiment Analysis">
-            <h2>بخش ۴<br>Sentiment Analysis</h2>
+    	<div class="section section-start step" data-section="4" data-section-title="Part 4: Clustering">
+            <h2>Part 4 <br> Clustering</h2>
         </div>
 
-        <!-- slide 4-1 -->
-        <div class="section slide step" data-section="4">
-            <span class="fit_image"> <img class="full-width" src="images/sentiment.png" /> </span>
-        </div>    
+        <!--&lt;!&ndash; slide 4-1 &ndash;&gt;-->
+        <!--<div class="section slide step" data-section="4">-->
+            <!--<span class="fit_image"> <img class="full-width" src="images/sentiment.png" /> </span>-->
+        <!--</div>    -->
 
-		<!-- slide 4-2 -->
-        <div class="section slide step" data-section="4">
-            <h2 class="center"> دو دسته کلی:</h2>
-			<ul class="no-bulet">
-				<li> مدل ساده : فقط بودن یا نبودن برایمان مهم باشد </li>
-				<li> مدل پیشرفته : رنک دادن به عنوان مثال از یک تا پنج</li>
-			</ul>
-        </div>
+		<!--&lt;!&ndash; slide 4-2 &ndash;&gt;-->
+        <!--<div class="section slide step" data-section="4">-->
+            <!--<h2 class="center"> دو دسته کلی:</h2>-->
+			<!---->
+        <!--</div>-->
         
     <!-- section 5 -->
-        <div class="section section-start step" data-section="5" data-section-title="خلاصه">
-            <h2>خلاصه</h2>
+        <div class="section section-start step" data-section="5" data-section-title="Summary">
+            <h2>Summary</h2>
         </div>
 
         <!-- slide 5-1 -->
         <div class="section slide step" data-section="5">
             <div>
-                <br>بخش ١ : مقدمه<br><br>
-                بخش ۲ : دسته بندی متون<br><br>
-                بخش ٣ : دسته بندی با Naive Bayes<br><br>
-                بخش ۴ : Sentiment Analysis<br><br>
+
             </div>
         </div>
         
@@ -356,7 +188,7 @@
         	<!-- <div class="resource"></div> -->
         </div>
         <div id="last-slide" class="step" data-x="-3950" data-y="2500" data-scale="8">
-        	از توجه شما سپاس گزاریم
+        	Thnak you for your attention!
         </div>
 
     </div>
@@ -385,7 +217,7 @@
 				var footer = 
 				'<div class="footer">\
 					<span class="slide-footer">'+section_title+'</span>\
-					<span class="slide-number">'+slide_number+' از '+number_of_slides+'</span>\
+					<span class="slide-number">'+slide_number+'/'+number_of_slides+'</span>\
 				</div>'
 
 				$(this).append(footer);

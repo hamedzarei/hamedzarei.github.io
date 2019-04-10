@@ -89,7 +89,7 @@ table {
 
 /* ///////////////////////////////////////////////////// GLOBAL STYLES */ 
 body {
-    font-family: 'yekan', sans-serif;
+    font-family: 'iransans', sans-serif;
     min-height: 740px;
     background-image: url(../images/paper_fibers.png);
     -webkit-font-smoothing: antialiased;
@@ -99,7 +99,7 @@ body {
     /*background-image: linear-gradient(to bottom, rgba(12, 153, 213, 0) 0px, rgba(12, 153, 213, 0) 100px, #0C99D5 450px, #0C99D5), repeating-linear-gradient(118deg, rgba(12, 153, 213, 0) 0px, #00A7E0 550px, rgba(12, 153, 213, 0) 550px, #00A7E0 800px, rgba(12, 153, 213, 0) 800px, #00A7E0 950px);*/
 }
 a {
-    color: inherit;
+    color: blue;
     text-decoration: none;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -120,8 +120,8 @@ a {
        -moz-transition: opacity 1s;
          -o-transition: opacity 1s;
             transition: opacity 1s;
-    text-align: right;
-    direction: rtl;
+    /*text-align: right;*/
+    /*direction: rtl;*/
 }
 .step:not(.active) {
     opacity: 0.3;
@@ -265,8 +265,11 @@ span{
     padding: 0 15px;
     border-radius: 0 0 10px 10px;
 }
-.slide .footer .slide-number{
+.slide .footer{
     float: left;
+}
+.slide-number {
+    float: right;
 }
 
 .en-number{
@@ -349,4 +352,7 @@ span.fit_image_80{
 }
 .second_title{
 	font-size: 20px;
+}
+.link {
+    font-size: 14px;
 }
