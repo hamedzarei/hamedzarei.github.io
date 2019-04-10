@@ -35,7 +35,7 @@
 	<!-- table of content -->
         <div style="clear: both;" id="table-of-content" class="step">
             Part 1: Introduction<br>
-            Part 2: Basic(Data Types, Commands)<br>
+            Part 2: Data Types & Commands<br>
 			Part 3: Pipeline & Pub/Sub <br>
 			Part 4: Clustering<br>
             Part 5: Summary
@@ -80,18 +80,18 @@
         </div>
 
     <!-- section 2 -->
-        <div class="section section-start step" data-section="2" data-section-title="Part 2: Basic(Data Types, Commands)">
-            <h2>Part 2 <br> Basic(Data Types, Commands)</h2>
+        <div class="section section-start step" data-section="2" data-section-title="Part 2: Data Types & Commands">
+            <h2>Part 2 <br> Data Types & Commands</h2>
         </div>
 		
 		<!-- slide 2-1 -->
         <div class="section slide step" data-section="2">
             <h2>String</h2><br>
             <ul>
-                <li>SET</li>
-                <li>GET</li>
-                <li>INCR</li>
-                <li>DECR</li>
+                <li>SET <span class="item-description">SET key value</span></li>
+                <li>GET <span class="item-description">GET key (value)</span></li>
+                <li>INCR <span class="item-description">INCR key (a = 2 -> a = 3)</span></li>
+                <li>DECR <span class="item-description">INCR key (a = 3 -> a = 2)</span></li>
             </ul>
         </div>
 
@@ -99,21 +99,24 @@
         <div class="section slide step" data-section="2">
             <h2>Lists</h2><br>
             <ul>
-                <li>LPUSH</li>
-                <li>RPUSH</li>
-                <li>LRANGE</li>
-                <li>LTRIM</li>
+                <li>LPUSH <span class="item-description">new element on head</span></li>
+                <li>RPUSH <span class="item-description">new element on tail</span></li>
+                <li>LRANGE <span class="item-description"> LRANGE mylist -3 2</span></li>
+                <li>LTRIM <span class="item-description"> create a list that never exceeds a given number of elements</span></li>
             </ul>
         </div>
 
         <!-- slide 2-3 -->
         <div class="section slide step" data-section="2">
-            <h2>Sets</h2><br>
+            <h2>Sets</h2>
+            <h5 style="color: #4060ff; font-size: 16px;">* Just like list but elements are unique</h5>
+            <br>
+
             <ul>
-                <li>SADD</li>
-                <li>SREM</li>
-                <li>SMEMBERS</li>
-                <li>SISMEMBER</li>
+                <li>SADD <span class="item-description">Add element</span></li>
+                <li>SREM <span class="item-description">Remove element</span></li>
+                <li>SMEMBERS <span class="item-description">Get all elements</span></li>
+                <li>SISMEMBER <span class="item-description">Check existence member!</span></li>
             </ul>
         </div>
 
@@ -146,28 +149,35 @@
             <h2>Pipeline</h2>
             <img src="images/pipeline_example.png" alt="" height="400">
            	<div class="center">
-
                 <img src="images/pipeline_example_time.png" alt="">
            	</div>
-            
         </div>
 
+        <!-- slide 3-3 -->
+        <div class="section slide step" data-section="3">
+            <h2>Pub/Sub</h2>
+            <img src="images/mqtt-pub-sub.jpg" alt="" height="400">
+        </div>
 
     <!-- section 4 -->
     	<div class="section section-start step" data-section="4" data-section-title="Part 4: Clustering">
             <h2>Part 4 <br> Clustering</h2>
         </div>
 
-        <!--&lt;!&ndash; slide 4-1 &ndash;&gt;-->
-        <!--<div class="section slide step" data-section="4">-->
-            <!--<span class="fit_image"> <img class="full-width" src="images/sentiment.png" /> </span>-->
-        <!--</div>    -->
+        <!-- slide 4-1 -->
+        <div class="section slide step" data-section="4">
+            <h2>Terminology</h2>
+            <ul>
+                <li>Highly Available (HA) - Master Slave</li>
+                <li>Sharding</li>
+            </ul>
+        </div>
 
-		<!--&lt;!&ndash; slide 4-2 &ndash;&gt;-->
-        <!--<div class="section slide step" data-section="4">-->
-            <!--<h2 class="center"> دو دسته کلی:</h2>-->
-			<!---->
-        <!--</div>-->
+        <!-- slide 4-1 -->
+        <div class="section slide step" data-section="4">
+            <h2>Redis Clustering</h2>
+            <img src="images/redis-clustering.png" class="full-width" alt="">
+        </div>
         
     <!-- section 5 -->
         <div class="section section-start step" data-section="5" data-section-title="Summary">
@@ -177,18 +187,19 @@
         <!-- slide 5-1 -->
         <div class="section slide step" data-section="5">
             <div>
-
+                <ul>
+                    <li>Redis Basic & Command</li>
+                    <li>Pipeline & Pub/Sub</li>
+                    <li>Clustering</li>
+                </ul>
             </div>
         </div>
         
 
 
 	<!-- overview -->
-        <div id="overview" class="step" data-x="-3950" data-y="2500" data-scale="5.5">
-        	<!-- <div class="resource"></div> -->
-        </div>
         <div id="last-slide" class="step" data-x="-3950" data-y="2500" data-scale="8">
-        	Thnak you for your attention!
+        	Thank you for your attention!
         </div>
 
     </div>
