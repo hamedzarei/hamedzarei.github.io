@@ -361,3 +361,6 @@ span.fit_image_80{
     font-size: 15px;
     padding-left: 20px;
 }
+.album img {
+    margin-left: 30px;
+}
