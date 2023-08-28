@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Git Strategy</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Hamed Zarei" />
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script language="javascript" src="js/custom.js"></script>
+
+</head>
+<!-- #96bbe5 -->
+<body class="impress-not-supported">
+    <a id="overview-btn" href="#overview">
+    	<img src="images/home.png" width="25">
+    </a>
+	<div id="impress">
+
+	<!-- main slide -->
+		<div id="main-slide" class="step" data-x="700" data-z="700" data-rotate-y="-80">
+            <br>
+            <h1 style="margin-top:-100px; margin-bottom:300px;">Git Strategy</h1>
+            <div class="logo-container">
+                <img style="opacity: 0.8; width: 40%; float: left;" src="images/git.png" />
+                <img style="opacity: 0.8; width: 40%; float: right;" src="images/map-logo-1.png" />
+            </div>
+
+        	<!--<p class="author">1398</p>-->
+        </div>
+
+	<!-- table of content -->
+        <div style="clear: both;" id="table-of-content" class="step">
+            Part 1: Introduction<br>
+            Part 2: Trunk-Based Development<br>
+			Part 3: Feature Branching <br>
+			Part 4: Git Flow<br>
+            Part 5: Summary
+        </div>
+
+	<!-- section 1 -->
+        <div class="section section-start step" data-section="1" data-section-title="Part 1: Introduction">
+            <h2>Part 1<br>Introduction</h2>
+        </div>
+
+		<!-- slide 1-1 -->
+        <div class="section slide step" data-section="1">
+            <h2>Best Practices for Naming Git Branches</h2>
+            <ul>
+                <li>Use Separators</li>
+                <li>Start Name with Category Word</li>
+                <li>Use the ID of the Issue</li>
+                <li>Avoid Using Numbers Only</li>
+                <li>Avoid Long Branch Names</li>
+                <li>Be Consistent</li>
+            </ul>
+        </div>
+
+    <!-- section 2 -->
+        <div class="section section-start step" data-section="2" data-section-title="Part 2: Trunk-Based Development">
+            <h2>Part 2 <br> Trunk-Based Development</h2>
+        </div>
+
+		<!-- slide 2-1 -->
+        <div class="section slide step" data-section="2">
+            <h2>Overview</h2><br>
+            <div class="center">
+                <img src="images/trunk-based-development.png" alt="" width="100%">
+            </div>
+        </div>
+
+        <!-- slide 2-2 -->
+        <div class="section slide step" data-section="2">
+            <h2>Workflow</h2><br>
+            <ul>
+                <li>Work on the main codebase</li>
+                <li>Make small, frequent changes</li>
+                <li>Use Continuous Integration</li>
+                <li>Merge changes frequently</li>
+            </ul>
+        </div>
+
+
+        <!--&lt;!&ndash; slide 2-4 &ndash;&gt;-->
+        <!--<div class="section slide step" data-section="2">-->
+            <!--<h2>Pros & Cons</h2><br>-->
+            <!--<div class="center">-->
+                <!--<img src="images/TBD-ProsCons.png" alt="" width="100%">-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!-- section 3 -->
+    	<div class="section section-start step" data-section="3" data-section-title="Part 3: Feature Branching">
+            <h2>Part 3 <br> Feature Branching </h2>
+        </div>
+
+        <!-- slide 3-1 -->
+        <div class="section slide step" data-section="3">
+            <h2>Overview</h2><br>
+            <div class="center">
+                <img src="images/feature-branching.png" alt="" width="100%">
+            </div>
+        </div>
+
+        <!-- slide 3-2 -->
+        <div class="section slide step" data-section="3">
+            <h2>Workflow</h2><br>
+            <ul>
+                <li>Create feature branches</li>
+                <li>Work on the feature</li>
+                <li>Create a pull request</li>
+                <li>Review and approve</li>
+                <li>Merge the feature branch</li>
+                <li>Clean up</li>
+            </ul>
+        </div>
+
+    <!-- section 4 -->
+    	<div class="section section-start step" data-section="4" data-section-title="Part 4: Git Flow">
+            <h2>Part 4 <br> Git Flow</h2>
+        </div>
+
+        <!-- slide 4-1 -->
+        <div class="section slide step" data-section="4">
+            <h2>Overview</h2><br>
+            <div class="center">
+                <img src="images/git-flow.png" alt="" width="90%">
+            </div>
+        </div>
+
+        <!-- slide 4-2 -->
+        <div class="section slide step" data-section="4">
+            <h2>Workflow</h2><br>
+            <ul>
+                <li>Create the develop branch</li>
+                <li>Create feature branches</li>
+                <li>Develop and merge the feature branch into develop</li>
+                <li>Create the release branch</li>
+                <li>Merge the release branch into main</li>
+                <li>Repeat the process</li>
+            </ul>
+        </div>
+
+    <!-- section 5 -->
+        <div class="section section-start step" data-section="5" data-section-title="Summary">
+            <h2>Summary</h2>
+        </div>
+
+        <!-- slide 5-1 -->
+        <div class="section slide step" data-section="5">
+            <div class="center">
+                <img src="images/summary.png" alt="" width="105%">
+            </div>
+        </div>
+
+
+
+	<!-- overview -->
+        <div id="last-slide" class="step" data-x="-3950" data-y="2500" data-scale="8">
+        	How we work?
+        </div>
+
+    </div>
+
+	<script src="js/impress.js"></script>
+	<script>
+
+	jQuery(document).ready(function($) {
+		var x0 = 0;
+		var y0 = 200;
+		var z0 = 0;
+
+		dy = 800;
+		dx = -1100;
+
+		number_of_slides = $('.section.slide').length;
+		slide_number = 1;
+
+		$('.section').each(function() {
+
+			if(! $(this).is('.slide')){
+				index = 0;
+				section_title = $(this).data('section-title');
+			}
+			else{
+				var footer =
+				'<div class="footer">\
+					<span class="slide-footer">'+section_title+'</span>\
+					<span class="slide-number">'+slide_number+'/'+number_of_slides+'</span>\
+				</div>';
+
+				$(this).append(footer);
+				slide_number++;
+			}
+
+			// handle position
+			section_number = $(this).data('section');
+			moveY = dy * section_number + y0;
+			moveX = dx * index + x0;
+			$(this).attr({
+				'data-y': moveY,
+				'data-x': moveX
+			});
+			index++;
+
+		});
+
+		impress().init();
+
+	});
+
+
+	</script>
+</body>
+</html>
