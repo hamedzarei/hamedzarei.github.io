@@ -50,8 +50,8 @@
         <div class="section slide step" data-section="1">
             <h2>Best Practices for Naming Git Branches</h2>
             <ul>
-                <li>Use Separators</li>
-                <li>Start Name with Category Word</li>
+                <li>Use Separators <span class="item-description">kebab-case</span> </li>
+                <li>Start Name with Category Word <span class="item-description">hotfix, bugfix, feature, test, wip</span> </li>
                 <li>Use the ID of the Issue</li>
                 <li>Avoid Using Numbers Only</li>
                 <li>Avoid Long Branch Names</li>
@@ -144,6 +144,15 @@
             </ul>
         </div>
 
+        <!-- slide 4-2 -->
+        <div class="section slide step" data-section="4">
+            <h2>Workflow - hotfix</h2><br>
+            <ul>
+                <li>Create the hotfix branch from main</li>
+                <li>Develop and merge the branch into develop and main</li>
+            </ul>
+        </div>
+
     <!-- section 5 -->
         <div class="section section-start step" data-section="5" data-section-title="Summary">
             <h2>Summary</h2>
@@ -156,11 +165,53 @@
             </div>
         </div>
 
+        <!-- slide 5-2 -->
+        <div class="section slide step" data-section="5">
+            <h2>How we work?</h2><br>
+        </div>
+
+        <!-- slide 5-3 -->
+        <div class="section slide step" data-section="5">
+            <h2>How we work?</h2><br>
+            <ul>
+                <li>Create the develop branch</li>
+                <li>Create feature branches <span class="item-description">MS-111</span></li>
+                <li>Develop and merge the feature branch into develop</li>
+                <li>Create a merge request into main from develop</li>
+                <li>Review and approve</li>
+            </ul>
+        </div>
+
+        <!-- slide 5-4 -->
+        <div class="section slide step" data-section="5">
+            <h2>How we work?</h2><br>
+            <ul>
+                <li>Merge the develop branch into main</li>
+                <li>Clean up <span class="item-description"> remove feature branches</span></li>
+                <li>Repeat the process</li>
+                <li>create tag for best candidate release on whole projects</li>
+            </ul>
+        </div>
+
+        <!-- slide 5-4 -->
+        <div class="section slide step" data-section="5">
+            <h2>Workflow - hotfix</h2><br>
+            <ul>
+                <li>Create the hotfix branch from main</li>
+                <li>Develop and merge the branch into develop and main</li>
+            </ul>
+            <h2> bugfix branch </h2>
+            <ul>
+                <li>Create fix branch from develop</li>
+                <li>Develop and merge the branch into develop</li>
+                <li>Naming: fix-MS-111</li>
+            </ul>
+        </div>
 
 
 	<!-- overview -->
         <div id="last-slide" class="step" data-x="-3950" data-y="2500" data-scale="8">
-        	How we work?
+        	Do you know other strategies?
         </div>
 
     </div>
